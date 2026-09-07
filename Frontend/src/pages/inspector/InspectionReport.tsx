@@ -1,7 +1,105 @@
-import { Download, FileText } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ArrowLeft, Download, Save } from "lucide-react";
+import { useNavigate, useParams } from "react-router-dom";
+
 import Sidebar from "../../components/Sidebar";
 
+import {
+  getInspectionById
+} from "../../services/inspectionStorage";
+
+import type { Inspection } from "../../types/inspection";
+
 function InspectionReport() {
+
+  const navigate = useNavigate();
+  const { id } = useParams();
+
+  const [inspection, setInspection] =
+    useState<Inspection | undefined>();
+
+  const [observations, setObservations] =
+    useState("");
+
+  const [recommendations, setRecommendations] =
+    useState("");
+
+  useEffect(() => {
+
+    if (id) {
+
+      const data = getInspectionById(id);
+
+      setInspection(data);
+
+      if (data) {
+        setObservations(
+          data.observations || ""
+        );
+
+        setRecommendations(
+          data.recommendations || ""
+        );
+      }
+
+    }
+
+  }, [id]);
+
+  if (!inspection) {
+
+    return (
+      <div className="dashboard-layout">
+
+        <Sidebar />
+
+        <main className="dashboard">
+
+          <h1>
+            Report Not Found
+          </h1>
+
+        </main>
+
+      </div>
+    );
+  }
+
+  const saveReport = () => {
+
+    const all =
+      JSON.parse(
+        localStorage.getItem(
+          "nirikshak_inspections"
+        ) || "[]"
+      ) as Inspection[];
+
+    const updated = all.map(
+      (item) => {
+
+        if (item.id === inspection.id) {
+
+          return {
+            ...item,
+            observations,
+            recommendations
+          };
+
+        }
+
+        return item;
+
+      }
+    );
+
+    localStorage.setItem(
+      "nirikshak_inspections",
+      JSON.stringify(updated)
+    );
+
+    alert("Report saved successfully.");
+
+  };
 
   return (
     <div className="dashboard-layout">
@@ -10,107 +108,175 @@ function InspectionReport() {
 
       <main className="dashboard">
 
-        <div className="page-header report-header">
+        <button
+          className="back-button"
+          onClick={() =>
+            navigate(
+              `/inspector/inspection/${inspection.id}`
+            )
+          }
+        >
+          <ArrowLeft size={18} />
+          Back to Inspection
+        </button>
 
-          <div>
+        <div className="report-editor">
 
-            <p className="eyebrow">
-              INSPECTION REPORT
-            </p>
-
-            <h1>
-              Product Inspection Report
-            </h1>
-
-          </div>
-
-          <button className="primary-btn">
-            <Download size={18} />
-            Download Report
-          </button>
-
-        </div>
-
-        <div className="report-card">
-
-          <div className="report-title">
-
-            <FileText size={32} />
+          <div className="report-header">
 
             <div>
-              <h2>
-                NIRIKSHAK AI
-              </h2>
+
+              <p className="eyebrow">
+                INSPECTION REPORT
+              </p>
+
+              <h1>
+                Legal Metrology Inspection Report
+              </h1>
 
               <p>
-                Legal Metrology Compliance Inspection Report
+                Inspection ID: {inspection.id}
               </p>
+
+            </div>
+
+            <div className="report-actions">
+
+              <button
+                className="secondary-btn"
+                onClick={saveReport}
+              >
+                <Save size={18} />
+                Save Changes
+              </button>
+
+              <button
+                className="primary-btn"
+                onClick={() =>
+                  window.print()
+                }
+              >
+                <Download size={18} />
+                Export PDF
+              </button>
+
             </div>
 
           </div>
 
-          <div className="report-details">
+          {/* PRODUCT INFORMATION */}
 
-            <div>
-              <span>Inspection ID</span>
-              <strong>INS-2026-0248</strong>
+          <section className="report-section">
+
+            <h2>
+              Product Information
+            </h2>
+
+            <div className="report-grid">
+
+              <div>
+                <label>Product</label>
+                <input
+                  value={inspection.productName}
+                  readOnly
+                />
+              </div>
+
+              <div>
+                <label>Brand</label>
+                <input
+                  value={inspection.brand}
+                  readOnly
+                />
+              </div>
+
+              <div>
+                <label>Inspection ID</label>
+                <input
+                  value={inspection.id}
+                  readOnly
+                />
+              </div>
+
+              <div>
+                <label>Date</label>
+                <input
+                  value={inspection.date}
+                  readOnly
+                />
+              </div>
+
             </div>
 
-            <div>
-              <span>Date</span>
-              <strong>05 September 2026</strong>
+          </section>
+
+          {/* RESULT */}
+
+          <section className="report-section">
+
+            <h2>
+              Compliance Result
+            </h2>
+
+            <div className="report-result">
+
+              <strong>
+                {inspection.status}
+              </strong>
+
+              <span>
+                Compliance Score: {inspection.score}%
+              </span>
+
             </div>
 
-            <div>
-              <span>Inspector</span>
-              <strong>Authorized Inspector</strong>
-            </div>
+          </section>
+
+          {/* EDITABLE SECTION */}
+
+          <section className="report-section">
+
+            <h2>
+              Inspector Observations
+            </h2>
+
+            <textarea
+              value={observations}
+              onChange={(e) =>
+                setObservations(e.target.value)
+              }
+              placeholder="Enter inspection observations..."
+              rows={6}
+            />
+
+          </section>
+
+          <section className="report-section">
+
+            <h2>
+              Recommendations / Action Required
+            </h2>
+
+            <textarea
+              value={recommendations}
+              onChange={(e) =>
+                setRecommendations(e.target.value)
+              }
+              placeholder="Enter recommended action..."
+              rows={6}
+            />
+
+          </section>
+
+          <div className="report-footer">
+
+            <p>
+              This report is an AI-assisted inspection
+              record. Final regulatory determination
+              remains with the authorized authority.
+            </p>
 
           </div>
-
-          <hr />
-
-          <h3>
-            Product Information
-          </h3>
-
-          <div className="report-grid">
-
-            <p>
-              <span>Product</span>
-              Wheat Flour
-            </p>
-
-            <p>
-              <span>Net Quantity</span>
-              1 kg
-            </p>
-
-            <p>
-              <span>MRP</span>
-              ₹58
-            </p>
-
-            <p>
-              <span>Category</span>
-              Packaged Commodity
-            </p>
-
-          </div>
-
-          <h3>
-            Compliance Summary
-          </h3>
-
-          <div className="report-status">
-            Requires Manual Review
-          </div>
-
-          <p className="report-note">
-            This report is an AI-assisted inspection record.
-            Final regulatory determination remains with the
-            authorized Legal Metrology authority.
-          </p>
 
         </div>
 

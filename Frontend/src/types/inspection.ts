@@ -23,4 +23,18 @@ export interface Inspection {
   date: string;
   status: "Compliant" | "Violation" | "Review";
   score: number;
+
+  // All images captured/uploaded for this inspection
+  images: string[];
+
+  // Extracted product information
+  product?: Product;
+
+  // Compliance checks
+  checks?: ComplianceCheck[];
+
+  // Editable report information
+  inspectorName?: string;
+  observations?: string;
+  recommendations?: string;
 }

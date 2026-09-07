@@ -3,6 +3,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 
+import InspectionDetails from "./pages/inspector/InspectionDetails";
+
+<Route
+  path="/inspector/inspection/:id"
+  element={<InspectionDetails />}
+/>
+
 import InspectorDashboard from "./pages/inspector/InspectorDashboard";
 import ScanProduct from "./pages/inspector/ScanProduct";
 import Analysis from "./pages/inspector/Analysis";
