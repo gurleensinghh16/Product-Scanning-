@@ -1,30 +1,164 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   ScanLine,
   Upload,
   Camera,
-  ArrowRight
+  ArrowRight,
+  X,
+  Image as ImageIcon
 } from "lucide-react";
-
 import Sidebar from "../../components/Sidebar";
 import { useNavigate } from "react-router-dom";
 
 function ScanProduct() {
-
   const navigate = useNavigate();
-  const [fileName, setFileName] = useState("");
 
-  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const [files, setFiles] = useState<File[]>([]);
+  const [cameraOpen, setCameraOpen] = useState(false);
 
-    const file = e.target.files?.[0];
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const streamRef = useRef<MediaStream | null>(null);
 
-    if (file) {
-      setFileName(file.name);
+  // -------------------------------
+  // Upload multiple images
+  // -------------------------------
+  const handleFiles = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const selectedFiles = Array.from(e.target.files || []);
+
+    setFiles((prev) => [...prev, ...selectedFiles]);
+
+    // Allows selecting the same file again later
+    e.target.value = "";
+  };
+
+  // -------------------------------
+  // Remove image
+  // -------------------------------
+  const removeFile = (index: number) => {
+    setFiles((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  // -------------------------------
+  // Open camera
+  // -------------------------------
+  const openCamera = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: true
+      });
+
+      streamRef.current = stream;
+      setCameraOpen(true);
+
+      // Wait until camera element exists
+      setTimeout(() => {
+        if (videoRef.current) {
+          videoRef.current.srcObject = stream;
+        }
+      }, 100);
+    } catch (error) {
+      console.error("Camera error:", error);
+      alert("Unable to access camera. Please allow camera permission.");
     }
   };
 
-  const startAnalysis = () => {
-    navigate("/inspector/analysis");
+  // -------------------------------
+  // Capture image from camera
+  // -------------------------------
+  const captureImage = () => {
+    const video = videoRef.current;
+
+    if (!video) return;
+
+    const canvas = document.createElement("canvas");
+
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+
+    const context = canvas.getContext("2d");
+
+    if (!context) return;
+
+    context.drawImage(video, 0, 0);
+
+    canvas.toBlob((blob) => {
+      if (!blob) return;
+
+      const file = new File(
+        [blob],
+        `camera-image-${Date.now()}.jpg`,
+        {
+          type: "image/jpeg"
+        }
+      );
+
+      setFiles((prev) => [...prev, file]);
+    }, "image/jpeg");
+  };
+
+  // -------------------------------
+  // Close camera
+  // -------------------------------
+  const closeCamera = () => {
+    if (streamRef.current) {
+      streamRef.current.getTracks().forEach((track) => track.stop());
+      streamRef.current = null;
+    }
+
+    setCameraOpen(false);
+  };
+
+  // -------------------------------
+  // Send images to OCR backend
+  // -------------------------------
+  const startAnalysis = async () => {
+    if (files.length === 0) {
+      alert("Please upload or capture at least one image.");
+      return;
+    }
+
+    const formData = new FormData();
+
+    files.forEach((file) => {
+      formData.append("images", file);
+    });
+
+    try {
+      /*
+        CHANGE THIS URL according to your backend.
+
+        Example:
+        http://localhost:5000/api/ocr
+      */
+
+      const response = await fetch("http://localhost:5000/api/ocr", {
+        method: "POST",
+        body: formData
+      });
+
+      if (!response.ok) {
+        throw new Error("OCR request failed");
+      }
+
+      const result = await response.json();
+
+      console.log("OCR RESULT:", result);
+
+      // For now we are storing the result temporarily
+      sessionStorage.setItem(
+        "ocrResult",
+        JSON.stringify(result)
+      );
+
+      navigate("/inspector/analysis");
+
+    } catch (error) {
+      console.error("OCR error:", error);
+
+      alert(
+        "Unable to connect to OCR backend. Please check that the backend is running."
+      );
+    }
   };
 
   return (
@@ -45,7 +179,8 @@ function ScanProduct() {
           </h1>
 
           <p>
-            Upload or capture a clear image of the packaged commodity label.
+            Upload or capture product images containing the package
+            declarations and label information.
           </p>
 
         </div>
@@ -59,20 +194,21 @@ function ScanProduct() {
             </div>
 
             <h2>
-              Upload Product Image
+              Upload Product Images
             </h2>
 
             <p>
-              Upload a product image containing the package
-              declarations and label information.
+              Upload multiple images of the packaged commodity.
+              Capture different sides of the package when required.
             </p>
 
+            {/* Upload */}
             <label className="upload-area">
 
               <Upload size={32} />
 
               <strong>
-                {fileName || "Choose an image"}
+                Choose multiple images
               </strong>
 
               <span>
@@ -82,7 +218,8 @@ function ScanProduct() {
               <input
                 type="file"
                 accept="image/*"
-                onChange={handleFile}
+                multiple
+                onChange={handleFiles}
               />
 
             </label>
@@ -91,35 +228,109 @@ function ScanProduct() {
               OR
             </div>
 
-            <button className="camera-btn">
+            {/* Camera */}
+            <button
+              className="camera-btn"
+              onClick={openCamera}
+              type="button"
+            >
               <Camera size={20} />
               Use Camera
             </button>
 
-            {fileName && (
+            {/* Image previews */}
+            {files.length > 0 && (
+
+              <div className="selected-images">
+
+                <h3>
+                  Selected Images ({files.length})
+                </h3>
+
+                <div className="image-grid">
+
+                  {files.map((file, index) => (
+
+                    <div
+                      className="image-preview"
+                      key={`${file.name}-${index}`}
+                    >
+
+                      <img
+                        src={URL.createObjectURL(file)}
+                        alt={`Product ${index + 1}`}
+                      />
+
+                      <button
+                        type="button"
+                        className="remove-image"
+                        onClick={() => removeFile(index)}
+                      >
+                        <X size={16} />
+                      </button>
+
+                    </div>
+
+                  ))}
+
+                </div>
+
+              </div>
+
+            )}
+
+            {/* Analyze */}
+            {files.length > 0 && (
 
               <button
                 className="primary-btn analyze-btn"
                 onClick={startAnalysis}
               >
+
                 Analyze Product
+
                 <ArrowRight size={18} />
+
               </button>
 
             )}
 
           </div>
 
+          {/* Instructions */}
+
           <div className="scan-instructions">
 
-            <h3>For better detection</h3>
+            <h3>
+              For better detection
+            </h3>
 
             <ul>
-              <li>Capture the complete package label.</li>
-              <li>Keep the image clear and well-lit.</li>
-              <li>Avoid glare or heavy reflections.</li>
-              <li>Ensure MRP and quantity declarations are visible.</li>
-              <li>Capture multiple sides if required.</li>
+
+              <li>
+                Capture the complete package label.
+              </li>
+
+              <li>
+                Keep the image clear and well-lit.
+              </li>
+
+              <li>
+                Avoid glare or heavy reflections.
+              </li>
+
+              <li>
+                Ensure MRP and quantity declarations are visible.
+              </li>
+
+              <li>
+                Capture multiple sides if required.
+              </li>
+
+              <li>
+                Use separate images for different package sides.
+              </li>
+
             </ul>
 
           </div>
@@ -127,6 +338,62 @@ function ScanProduct() {
         </div>
 
       </main>
+
+      {/* CAMERA MODAL */}
+
+      {cameraOpen && (
+
+        <div className="camera-modal">
+
+          <div className="camera-container">
+
+            <div className="camera-header">
+
+              <h2>
+                Capture Product Image
+              </h2>
+
+              <button
+                type="button"
+                onClick={closeCamera}
+              >
+                <X size={22} />
+              </button>
+
+            </div>
+
+            <video
+              ref={videoRef}
+              autoPlay
+              playsInline
+              className="camera-video"
+            />
+
+            <button
+              type="button"
+              className="primary-btn capture-btn"
+              onClick={captureImage}
+            >
+
+              <Camera size={20} />
+
+              Capture Image
+
+            </button>
+
+            <button
+              type="button"
+              className="secondary-btn"
+              onClick={closeCamera}
+            >
+              Done
+            </button>
+
+          </div>
+
+        </div>
+
+      )}
 
     </div>
   );
