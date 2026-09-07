@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const multer = require("multer");
 const { checkImageQuality } = require("./image-quality");
+const { runRuleEngine } = require("./rule-engine");
 
 const app = express();
 
@@ -38,6 +39,55 @@ app.post(
     }
   }
 );
+
+app.post("/api/rule-engine", async (req, res) => {
+  try {
+    const {
+      category,
+      subcategory,
+      imported,
+      ocr
+    } = req.body;
+
+    if (!category) {
+      return res.status(400).json({
+        success: false,
+        message: "Category is required"
+      });
+    }
+
+    if (!subcategory) {
+      return res.status(400).json({
+        success: false,
+        message: "Subcategory is required"
+      });
+    }
+
+    if (!Array.isArray(ocr)) {
+      return res.status(400).json({
+        success: false,
+        message: "OCR data must be an array"
+      });
+    }
+
+    const result = runRuleEngine({
+      category,
+      subcategory,
+      imported: imported || false,
+      ocr
+    });
+
+    res.json(result);
+
+  } catch (error) {
+    console.error(error);
+
+    res.status(500).json({
+      success: false,
+      message: "Rule engine failed"
+    });
+  }
+});
 
 const PORT = process.env.PORT || 5001;
 

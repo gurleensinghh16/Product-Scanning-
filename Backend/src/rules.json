@@ -1,0 +1,432 @@
+{
+  "common_rules": [
+    {
+  "id": "product_name",
+  "label": "Product / Commodity Name",
+  "keywords": [
+    "biscuit",
+    "biscuits",
+    "tea",
+    "coffee",
+    "cereal",
+    "pulses",
+    "salt",
+    "shampoo",
+    "cream",
+    "lotion",
+    "perfume",
+    "soap",
+    "detergent",
+    "soft drink",
+    "beverage",
+    "drinking water",
+    "mineral water"
+  ],
+  "required": true
+},
+    {
+      "id": "net_quantity",
+      "label": "Net Quantity",
+      "keywords": [
+        "net qty",
+        "net quantity",
+        "net weight",
+        "net volume"
+      ],
+      "required": true
+    },
+    {
+      "id": "mrp",
+      "label": "Maximum Retail Price",
+      "keywords": [
+        "mrp",
+        "maximum retail price",
+        "max retail price"
+      ],
+      "required": true
+    },
+    {
+      "id": "unit_sale_price",
+      "label": "Unit Sale Price",
+      "keywords": [
+        "per 100g",
+        "per 100 g",
+        "per kg",
+        "per 100ml",
+        "per 100 ml",
+        "per litre",
+        "per liter"
+      ],
+      "required": false
+    },
+    {
+      "id": "manufacturer",
+      "label": "Manufacturer / Packer / Importer",
+      "keywords": [
+  "manufactured by",
+  "manufactured for",
+  "manufactured",
+  "marketed by",
+  "marketed",
+  "mfg by",
+  "mfg/mkt by",
+  "mfg/mkt",
+  "mfg",
+  "mkt by",
+  "packed by",
+  "packed for",
+  "packed",
+  "imported by",
+  "importer",
+  "manufacturer",
+  "packer"
+],
+      "required": true
+    },
+    {
+      "id": "country_of_origin",
+      "label": "Country of Origin",
+      "keywords": [
+        "country of origin",
+        "made in",
+        "manufactured in",
+        "product of"
+      ],
+      "required": false,
+      "condition": "imported"
+    },
+    {
+      "id": "consumer_contact",
+      "label": "Consumer Complaint Contact",
+      "keywords": [
+        "customer care",
+        "consumer care",
+        "customer service",
+        "consumer service",
+        "helpline",
+        "contact us",
+        "complaint"
+      ],
+      "required": true
+    },
+    {
+  "id": "date",
+  "label": "Manufacturing / Packing Date",
+  "keywords": [
+    "mfg date",
+    "mfg.",
+    "mfd",
+    "mfd.",
+    "pkd",
+    "pkd.",
+    "packed on",
+    "packing date",
+    "manufacturing date",
+    "date of manufacture",
+    "date of packing"
+  ],
+  "required": false
+},
+    {
+      "id": "best_before",
+      "label": "Best Before / Use By",
+      "keywords": [
+        "best before",
+        "use by",
+        "expiry",
+        "expires",
+        "expiry date"
+      ],
+      "required": false
+    }
+  ],
+
+  "categories": {
+    "food": {
+      "subcategories": {
+        "biscuits": {
+          "standard_quantities": [
+            "25g",
+            "50g",
+            "60g",
+            "75g",
+            "100g",
+            "120g",
+            "150g",
+            "200g",
+            "250g",
+            "300g"
+          ],
+          "after": "300g",
+          "multiple": "100g"
+        },
+
+        "cereals_pulses": {
+          "standard_quantities": [
+            "100g",
+            "200g",
+            "500g",
+            "1kg",
+            "2kg",
+            "5kg"
+          ],
+          "after": "5kg",
+          "multiple": "5kg",
+          "below": "100g",
+          "below_restriction": false
+        },
+
+        "coffee": {
+          "standard_quantities": [
+            "25g",
+            "50g",
+            "75g",
+            "100g",
+            "150g",
+            "200g",
+            "250g",
+            "500g",
+            "1kg",
+            "1.5kg",
+            "2kg"
+          ],
+          "after": "2kg",
+          "multiple": "1kg",
+          "below": "25g",
+          "below_restriction": false
+        },
+
+        "tea": {
+          "standard_quantities": [
+            "25g",
+            "50g",
+            "75g",
+            "100g",
+            "125g",
+            "150g",
+            "200g",
+            "250g",
+            "500g",
+            "750g",
+            "1kg",
+            "1.5kg",
+            "2kg"
+          ],
+          "after": "2kg",
+          "multiple": "1kg",
+          "below": "25g",
+          "below_restriction": false
+        },
+
+        "salt": {
+          "standard_quantities": [
+            "50g",
+            "100g",
+            "200g",
+            "500g",
+            "750g",
+            "1kg",
+            "2kg",
+            "5kg"
+          ],
+          "below": "50g",
+          "multiple": "10g",
+          "below_restriction": true
+        }
+      }
+    },
+
+    "cosmetics": {
+      "subcategories": {
+        "shampoo": {},
+        "cream": {},
+        "lotion": {},
+        "perfume": {}
+      }
+    },
+
+    "soaps_detergents": {
+      "subcategories": {
+        "laundry_soap": {
+          "standard_quantities": [
+            "25g",
+            "50g",
+            "75g",
+            "100g",
+            "125g",
+            "150g"
+          ],
+          "after": "150g",
+          "multiple": "50g"
+        },
+
+        "detergent_cake_bar": {
+          "standard_quantities": [
+            "50g",
+            "75g",
+            "100g",
+            "125g",
+            "150g",
+            "200g",
+            "250g",
+            "300g"
+          ],
+          "below": "50g",
+          "below_restriction": false,
+          "after": "300g",
+          "multiple": "100g"
+        },
+
+        "toilet_soap": {
+          "standard_quantities": [
+            "15g",
+            "25g",
+            "50g",
+            "60g",
+            "75g",
+            "100g",
+            "125g",
+            "150g"
+          ],
+          "after": "150g",
+          "multiple": "50g"
+        },
+
+        "detergent_powder": {
+          "standard_quantities": [
+            "50g",
+            "75g",
+            "100g",
+            "150g",
+            "200g",
+            "250g",
+            "400g",
+            "500g",
+            "700g",
+            "750g",
+            "800g",
+            "1kg",
+            "1.5kg",
+            "2kg"
+          ],
+          "below": "50g",
+          "below_restriction": false,
+          "after": "2kg",
+          "multiple": "1kg"
+        }
+      }
+    },
+
+    "beverages_water": {
+      "subcategories": {
+        "soft_drink": {
+          "standard_quantities": [
+            "65ml",
+            "100ml",
+            "125ml",
+            "150ml",
+            "160ml",
+            "175ml",
+            "180ml",
+            "200ml",
+            "240ml",
+            "250ml",
+            "300ml",
+            "330ml",
+            "350ml",
+            "400ml",
+            "475ml",
+            "500ml",
+            "600ml",
+            "750ml",
+            "1L",
+            "1.2L",
+            "1.25L",
+            "1.5L",
+            "1.75L",
+            "2L",
+            "2.25L",
+            "2.5L",
+            "3L",
+            "4L",
+            "5L"
+          ]
+        },
+
+        "non_alcoholic_beverage": {
+          "standard_quantities": [
+            "65ml",
+            "100ml",
+            "125ml",
+            "150ml",
+            "160ml",
+            "175ml",
+            "180ml",
+            "200ml",
+            "240ml",
+            "250ml",
+            "300ml",
+            "330ml",
+            "350ml",
+            "400ml",
+            "475ml",
+            "500ml",
+            "600ml",
+            "750ml",
+            "1L",
+            "1.2L",
+            "1.25L",
+            "1.5L",
+            "1.75L",
+            "2L",
+            "2.25L",
+            "2.5L",
+            "3L",
+            "4L",
+            "5L"
+          ]
+        },
+
+        "drinking_water": {
+          "standard_quantities": [
+            "100ml",
+            "150ml",
+            "200ml",
+            "250ml",
+            "300ml",
+            "500ml",
+            "750ml",
+            "1L",
+            "1.5L",
+            "2L",
+            "3L",
+            "4L",
+            "5L"
+          ],
+          "after": "5L",
+          "multiple": "5L"
+        },
+
+        "mineral_water": {
+          "standard_quantities": [
+            "100ml",
+            "150ml",
+            "200ml",
+            "250ml",
+            "300ml",
+            "500ml",
+            "750ml",
+            "1L",
+            "1.5L",
+            "2L",
+            "3L",
+            "4L",
+            "5L"
+          ],
+          "after": "5L",
+          "multiple": "5L"
+        }
+      }
+    }
+  }
+}

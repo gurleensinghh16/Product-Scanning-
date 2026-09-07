@@ -2,6 +2,8 @@
     {
         "text": "MADE IN INDIA",
         "confidence": 0.927,
+        "sharpness": 528.45,
+        "quality": "GOOD",
         "box": [
             218,
             586,
@@ -12,6 +14,8 @@
     {
         "text": "  ",
         "confidence": 0.507,
+        "sharpness": 1095.06,
+        "quality": "QUESTIONABLE",
         "box": [
             373,
             583,
@@ -22,6 +26,8 @@
     {
         "text": "  ",
         "confidence": 0.398,
+        "sharpness": 1560.84,
+        "quality": "QUESTIONABLE",
         "box": [
             372,
             604,
@@ -32,6 +38,8 @@
     {
         "text": "MINIMUM WEIGHT 11:.29g",
         "confidence": 0.925,
+        "sharpness": 396.4,
+        "quality": "QUESTIONABLE",
         "box": [
             676,
             608,
@@ -42,6 +50,8 @@
     {
         "text": "ooo",
         "confidence": 0.679,
+        "sharpness": 1943.52,
+        "quality": "GOOD",
         "box": [
             371,
             625,
@@ -52,6 +62,8 @@
     {
         "text": " OQR IA    SU",
         "confidence": 0.525,
+        "sharpness": 1872.24,
+        "quality": "QUESTIONABLE",
         "box": [
             370,
             644,
@@ -62,6 +74,8 @@
     {
         "text": "REFER THE FIRST TWO CHARACTERS OF THE BAICH NO",
         "confidence": 0.964,
+        "sharpness": 1951.83,
+        "quality": "GOOD",
         "box": [
             370,
             665,
@@ -72,6 +86,8 @@
     {
         "text": "AND SCAN THE QR CODE.",
         "confidence": 0.974,
+        "sharpness": 2096.37,
+        "quality": "GOOD",
         "box": [
             368,
             684,
@@ -82,6 +98,8 @@
     {
         "text": "ssa Lic. No.1302990026",
         "confidence": 0.773,
+        "sharpness": 1655.93,
+        "quality": "GOOD",
         "box": [
             367,
             711,
@@ -92,6 +110,8 @@
     {
         "text": "CONTCTCONSUMERRESPONSECOORDINATORAT:",
         "confidence": 0.857,
+        "sharpness": 2588.85,
+        "quality": "GOOD",
         "box": [
             256,
             742,
@@ -102,6 +122,8 @@
     {
         "text": "1800-208-2653 indiahelpline@coca-cola.com",
         "confidence": 0.982,
+        "sharpness": 2675.47,
+        "quality": "GOOD",
         "box": [
             254,
             768,
@@ -112,6 +134,8 @@
     {
         "text": "ADDRESS:SAME AS MFG/MKT BY ADDRESS",
         "confidence": 0.946,
+        "sharpness": 2715.45,
+        "quality": "GOOD",
         "box": [
             253,
             793,
@@ -122,6 +146,8 @@
     {
         "text": "NECYCLE",
         "confidence": 0.833,
+        "sharpness": 428.53,
+        "quality": "QUESTIONABLE",
         "box": [
             207,
             829,
@@ -132,6 +158,8 @@
     {
         "text": "ORDATEOMANUFACTURE,EXPIRY,BATCHNO",
         "confidence": 0.773,
+        "sharpness": 2454.76,
+        "quality": "GOOD",
         "box": [
             248,
             820,
@@ -142,6 +170,8 @@
     {
         "text": "USP&MRP(ICL OF ALLTES) SEE NEC",
         "confidence": 0.821,
+        "sharpness": 1930.62,
+        "quality": "GOOD",
         "box": [
             246,
             845,
@@ -152,6 +182,8 @@
     {
         "text": "Sprite",
         "confidence": 0.999,
+        "sharpness": 645.87,
+        "quality": "GOOD",
         "box": [
             221,
             865,
@@ -162,6 +194,8 @@
     {
         "text": "NET QUANTITY:",
         "confidence": 0.977,
+        "sharpness": 1513.28,
+        "quality": "GOOD",
         "box": [
             439,
             914,
@@ -172,6 +206,8 @@
     {
         "text": "LUMON-LIMEFLAVOURED",
         "confidence": 0.889,
+        "sharpness": 388.52,
+        "quality": "QUESTIONABLE",
         "box": [
             267,
             954,
@@ -182,6 +218,8 @@
     {
         "text": "250 ml",
         "confidence": 0.993,
+        "sharpness": 794.92,
+        "quality": "GOOD",
         "box": [
             435,
             951,
