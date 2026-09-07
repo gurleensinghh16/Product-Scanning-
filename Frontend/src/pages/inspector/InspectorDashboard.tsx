@@ -78,26 +78,32 @@ function InspectorDashboard() {
           <div className="product-list">
 
             <ProductCard
+              id="INS-0248"
               name="Packaged Wheat Flour"
               brand="Sample Brand"
               mrp="₹58"
               status="Compliant"
+              image="/products/wheat-flour.jpg"
             />
 
             <ProductCard
+              id="INS-0247"
               name="Packaged Biscuits"
               brand="Sample Foods"
               mrp="₹30"
               status="Violation"
+              image="/products/biscuits.jpg"
             />
 
             <ProductCard
+              id="INS-0246"
               name="Cooking Oil"
               brand="Sample Oils"
               mrp="₹145"
               status="Review"
+              image="/products/cooking-oil.jpg"
             />
-
+            
           </div>
 
         </section>

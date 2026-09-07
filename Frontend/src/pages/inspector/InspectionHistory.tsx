@@ -1,35 +1,27 @@
+import { useEffect, useState } from "react";
 import Sidebar from "../../components/Sidebar";
 import StatusBadge from "../../components/StatusBadge";
+
+import {
+  getInspections
+} from "../../services/inspectionStorage";
+
 import type { Inspection } from "../../types/inspection";
+
+import { useNavigate } from "react-router-dom";
 
 function InspectionHistory() {
 
-  const inspections: Inspection[] = [
-    {
-      id: "INS-0248",
-      productName: "Wheat Flour",
-      brand: "Sample Brand",
-      date: "05 Sep 2026",
-      status: "Review",
-      score: 82
-    },
-    {
-      id: "INS-0247",
-      productName: "Biscuits",
-      brand: "Sample Foods",
-      date: "04 Sep 2026",
-      status: "Violation",
-      score: 61
-    },
-    {
-      id: "INS-0246",
-      productName: "Cooking Oil",
-      brand: "Sample Oils",
-      date: "03 Sep 2026",
-      status: "Compliant",
-      score: 96
-    }
-  ];
+  const navigate = useNavigate();
+
+  const [inspections, setInspections] =
+    useState<Inspection[]>([]);
+
+  useEffect(() => {
+
+    setInspections(getInspections());
+
+  }, []);
 
   return (
     <div className="dashboard-layout">
@@ -49,50 +41,97 @@ function InspectionHistory() {
           </h1>
 
           <p>
-            View previous product inspections and compliance results.
+            Showing the latest 10 inspections.
           </p>
 
         </div>
 
-        <div className="history-table">
+        {inspections.length === 0 ? (
 
-          <div className="history-row history-heading">
+          <div className="empty-state">
 
-            <span>ID</span>
-            <span>Product</span>
-            <span>Date</span>
-            <span>Score</span>
-            <span>Status</span>
+            <h2>
+              No inspections yet
+            </h2>
+
+            <p>
+              Completed inspections will appear here.
+            </p>
 
           </div>
 
-          {inspections.map((inspection) => (
+        ) : (
 
-            <div
-              className="history-row"
-              key={inspection.id}
-            >
+          <div className="history-table">
 
-              <span>{inspection.id}</span>
+            <div className="history-row history-heading">
 
-              <div>
-                <strong>{inspection.productName}</strong>
-                <small>{inspection.brand}</small>
-              </div>
-
-              <span>{inspection.date}</span>
-
-              <span>
-                {inspection.score}%
-              </span>
-
-              <StatusBadge status={inspection.status} />
+              <span>Image</span>
+              <span>ID / Product</span>
+              <span>Date</span>
+              <span>Score</span>
+              <span>Status</span>
 
             </div>
 
-          ))}
+            {inspections.map(
+              (inspection) => (
 
-        </div>
+                <button
+                  className="history-row history-clickable"
+                  key={inspection.id}
+                  onClick={() =>
+                    navigate(
+                      `/inspector/inspection/${inspection.id}`
+                    )
+                  }
+                >
+
+                  <div className="history-thumbnail">
+
+                    {inspection.images[0] && (
+
+                      <img
+                        src={inspection.images[0]}
+                        alt={inspection.productName}
+                      />
+
+                    )}
+
+                  </div>
+
+                  <div className="history-product">
+
+                    <strong>
+                      {inspection.productName}
+                    </strong>
+
+                    <small>
+                      {inspection.id} • {inspection.brand}
+                    </small>
+
+                  </div>
+
+                  <span>
+                    {inspection.date}
+                  </span>
+
+                  <span>
+                    {inspection.score}%
+                  </span>
+
+                  <StatusBadge
+                    status={inspection.status}
+                  />
+
+                </button>
+
+              )
+            )}
+
+          </div>
+
+        )}
 
       </main>
 
