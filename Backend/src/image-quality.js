@@ -12,16 +12,22 @@ async function checkImageQuality(file) {
   // -----------------------------
   // 1. Resolution check
   // -----------------------------
+
   const minWidth = 1000;
   const minHeight = 1000;
 
   const resolutionGood =
-    width >= minWidth && height >= minHeight;
+    width >= minWidth &&
+    height >= minHeight;
 
   // -----------------------------
   // 2. Brightness check
   // -----------------------------
-  // Mean pixel value: 0 = black, 255 = white
+
+  // Mean pixel value:
+  // 0 = black
+  // 255 = white
+
   const brightness = stats.channels[0].mean;
 
   const minBrightness = 50;
@@ -32,65 +38,12 @@ async function checkImageQuality(file) {
     brightness <= maxBrightness;
 
   // -----------------------------
-  // 3. Blur check
+  // Overall image quality
   // -----------------------------
-  const { data, info } = await image
-    .clone()
-    .greyscale()
-    .raw()
-    .toBuffer({ resolveWithObject: true });
 
-  let laplacianSum = 0;
-  let laplacianSquaredSum = 0;
-  let count = 0;
-
-  // Laplacian kernel:
-  //
-  //  0  1  0
-  //  1 -4  1
-  //  0  1  0
-
-  for (let y = 1; y < info.height - 1; y++) {
-    for (let x = 1; x < info.width - 1; x++) {
-      const center = y * info.width + x;
-
-      const top = data[(y - 1) * info.width + x];
-      const bottom = data[(y + 1) * info.width + x];
-      const left = data[y * info.width + (x - 1)];
-      const right = data[y * info.width + (x + 1)];
-      const middle = data[center];
-
-      const laplacian =
-        top +
-        bottom +
-        left +
-        right -
-        4 * middle;
-
-      laplacianSum += laplacian;
-      laplacianSquaredSum += laplacian * laplacian;
-
-      count++;
-    }
-  }
-
-  const laplacianMean = laplacianSum / count;
-
-  const blurScore =
-    laplacianSquaredSum / count -
-    laplacianMean * laplacianMean;
-
-  const minBlurScore = 100;
-
-  const blurGood = blurScore >= minBlurScore;
-
-  // -----------------------------
-  // Overall result
-  // -----------------------------
   const qualityGood =
     resolutionGood &&
-    brightnessGood &&
-    blurGood;
+    brightnessGood;
 
   return {
     success: true,
@@ -99,13 +52,11 @@ async function checkImageQuality(file) {
 
     checks: {
       resolution: resolutionGood,
-      brightness: brightnessGood,
-      blur: blurGood
+      brightness: brightnessGood
     },
 
     scores: {
-      brightness: Number(brightness.toFixed(2)),
-      blur: Number(blurScore.toFixed(2))
+      brightness: Number(brightness.toFixed(2))
     },
 
     image: {

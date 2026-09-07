@@ -1,0 +1,20 @@
+{
+  "overall_status": "POTENTIAL_NON_COMPLIANCE",
+  "checks": [
+    {
+      "name": "MRP",
+      "status": "PASS",
+      "evidence": "₹199"
+    },
+    {
+      "name": "Net Quantity",
+      "status": "FAIL",
+      "evidence": "500g"
+    },
+    {
+      "name": "Manufacturer Details",
+      "status": "PASS",
+      "evidence": "ABC Foods Pvt Ltd"
+    }
+  ]
+}

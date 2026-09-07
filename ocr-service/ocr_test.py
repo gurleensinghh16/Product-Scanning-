@@ -8,7 +8,7 @@ ocr = PaddleOCR(
     use_doc_unwarping=False
 )
 
-image_path = "ocr-service/blur.jpg"
+image_path = "ocr-service/test.jpg"
 
 result = ocr.predict(image_path)
 
