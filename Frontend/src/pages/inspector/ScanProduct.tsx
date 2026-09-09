@@ -112,54 +112,48 @@ function ScanProduct() {
   // Send images to OCR backend
   // -------------------------------
   const startAnalysis = async () => {
-    if (files.length === 0) {
-      alert("Please upload or capture at least one image.");
-      return;
-    }
+  if (files.length === 0) {
+    alert("Please upload or capture at least one image.");
+    return;
+  }
 
-    const formData = new FormData();
+  const formData = new FormData();
 
-    files.forEach((file) => {
-      formData.append("images", file);
-    });
+  // For now, test with the first image only
+  formData.append("image", files[0]);
 
-    try {
-      /*
-        CHANGE THIS URL according to your backend.
-
-        Example:
-        http://localhost:5000/api/ocr
-      */
-
-      const response = await fetch("http://localhost:5000/api/ocr", {
+  try {
+    const response = await fetch(
+      "http://localhost:5001/api/image-quality",
+      {
         method: "POST",
         body: formData
-      });
-
-      if (!response.ok) {
-        throw new Error("OCR request failed");
       }
+    );
 
-      const result = await response.json();
-
-      console.log("OCR RESULT:", result);
-
-      // For now we are storing the result temporarily
-      sessionStorage.setItem(
-        "ocrResult",
-        JSON.stringify(result)
-      );
-
-      navigate("/inspector/analysis");
-
-    } catch (error) {
-      console.error("OCR error:", error);
-
-      alert(
-        "Unable to connect to OCR backend. Please check that the backend is running."
-      );
+    if (!response.ok) {
+      throw new Error("Image quality request failed");
     }
-  };
+
+    const result = await response.json();
+
+    console.log("IMAGE QUALITY RESULT:", result);
+
+    sessionStorage.setItem(
+      "imageQualityResult",
+      JSON.stringify(result)
+    );
+
+    navigate("/inspector/analysis");
+
+  } catch (error) {
+    console.error("Image quality error:", error);
+
+    alert(
+      "Unable to connect to image quality backend. Please check that the backend is running."
+    );
+  }
+};
 
   return (
     <div className="dashboard-layout">

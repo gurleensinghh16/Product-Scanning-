@@ -1,30 +1,17 @@
-import { CheckCircle2, LoaderCircle, ScanText } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import Sidebar from "../../components/Sidebar";
 import { useEffect, useState } from "react";
 
 function Analysis() {
-
-  const [progress, setProgress] = useState(0);
+  const [imageQuality, setImageQuality] = useState<any>(null);
 
   useEffect(() => {
+  const storedResult = sessionStorage.getItem("imageQualityResult");
 
-    const interval = setInterval(() => {
-
-      setProgress((previous) => {
-
-        if (previous >= 100) {
-          clearInterval(interval);
-          return 100;
-        }
-
-        return previous + 10;
-      });
-
-    }, 300);
-
-    return () => clearInterval(interval);
-
-  }, []);
+  if (storedResult) {
+    setImageQuality(JSON.parse(storedResult));
+  }
+}, []);
 
   return (
     <div className="dashboard-layout">
@@ -40,92 +27,66 @@ function Analysis() {
           </p>
 
           <h1>
-            Analyzing Product
-          </h1>
+  Image Quality Check
+</h1>
 
-          <p>
-            Extracting declarations and checking applicable compliance rules.
-          </p>
+<p>
+  Checking image resolution and brightness before inspection.
+</p>
 
         </div>
 
         <div className="analysis-card">
 
-          <div className="analysis-icon">
-            {progress < 100
-              ? <LoaderCircle size={50} className="spin" />
-              : <CheckCircle2 size={50} />
-            }
-          </div>
+  <div className="analysis-icon">
+    <CheckCircle2 size={50} />
+  </div>
 
-          <h2>
-            {progress < 100
-              ? "Processing Product..."
-              : "Analysis Complete"}
-          </h2>
+  <h2>
+    Image Quality Check Complete
+  </h2>
 
-          <div className="progress-bar">
+  {imageQuality && (
+    <div className="image-quality-results">
 
-            <div
-              className="progress-fill"
-              style={{ width: `${progress}%` }}
-            />
+      <div className="quality-result">
 
-          </div>
+        <h3>Resolution</h3>
 
-          <span>
-            {progress}% complete
-          </span>
+        <p>
+          {imageQuality.image.width} × {imageQuality.image.height}
+        </p>
 
-          <div className="analysis-steps">
+        <strong>
+          {imageQuality.checks.resolution
+            ? "PASS"
+            : "NEEDS REVIEW"}
+        </strong>
 
-            <AnalysisStep
-              title="Image Processing"
-              complete={progress >= 20}
-            />
+      </div>
 
-            <AnalysisStep
-              title="OCR Declaration Extraction"
-              complete={progress >= 50}
-            />
+      <div className="quality-result">
 
-            <AnalysisStep
-              title="Rule Applicability Check"
-              complete={progress >= 80}
-            />
+        <h3>Brightness</h3>
 
-            <AnalysisStep
-              title="Compliance Evaluation"
-              complete={progress >= 100}
-            />
+        <p>
+          {imageQuality.scores.brightness}
+        </p>
 
-          </div>
+        <strong>
+          {imageQuality.checks.brightness
+            ? "PASS"
+            : "NEEDS REVIEW"}
+        </strong>
 
-        </div>
-
-      </main>
+      </div>
 
     </div>
-  );
-}
+  )}
 
-function AnalysisStep({
-  title,
-  complete
-}: {
-  title: string;
-  complete: boolean;
-}) {
+</div>
 
-  return (
-    <div className="analysis-step">
-
-      {complete
-        ? <CheckCircle2 size={20} />
-        : <ScanText size={20} />
-      }
-
-      <span>{title}</span>
+      </main>
 
     </div>
   );
