@@ -15,6 +15,7 @@ function ScanProduct() {
 
   const [files, setFiles] = useState<File[]>([]);
   const [cameraOpen, setCameraOpen] = useState(false);
+  const [category, setCategory] = useState("");
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const streamRef = useRef<MediaStream | null>(null);
@@ -117,10 +118,19 @@ function ScanProduct() {
     alert("Please upload or capture at least one image.");
     return;
   }
+  if (!category) {
+  alert("Please select a product category.");
+  return;
+}
 
   // For now we process the first image.
   // Later we will process all uploaded sides.
   const image = files[0];
+
+sessionStorage.setItem(
+  "selectedCategory",
+  category
+);
 
   try {
 
@@ -287,13 +297,26 @@ function ScanProduct() {
 
           <div className="upload-card">
 
-            <div className="scan-icon">
-              <ScanLine size={42} />
-            </div>
+  <div className="scan-icon">
+    <ScanLine size={42} />
+  </div>
 
-            <h2>
-              Upload Product Images
-            </h2>
+  <h2>Select Product Category</h2>
+
+  <select
+    className="category-select"
+    value={category}
+    onChange={(e) => setCategory(e.target.value)}
+  >
+    <option value="">Select category</option>
+    <option value="food">Food Products</option>
+    <option value="beverages_water">Beverages & Water</option>
+    <option value="personal_care">Personal Care</option>
+  </select>
+
+  <h2>
+    Upload Product Images
+  </h2>
 
             <p>
               Upload multiple images of the packaged commodity.
@@ -337,7 +360,7 @@ function ScanProduct() {
             </button>
 
             {/* Image previews */}
-            {files.length > 0 && (
+            {files.length > 0 && category && (
 
               <div className="selected-images">
 

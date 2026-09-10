@@ -1,0 +1,1281 @@
+{
+  "product_folder": "product-1",
+  "images_processed": 3,
+  "images": [
+    {
+      "file": "pic_1.jpg",
+      "ocr": [
+        {
+          "text": "INGREDIENTS: REFINED WHEAT FLOUR (MAIDA) SUGAR, EDIBLE VEGETABLE OIL (PALM).",
+          "confidence": 0.988,
+          "box": [
+            121,
+            182,
+            571,
+            210
+          ],
+          "sharpness": 2695.43,
+          "quality": "GOOD"
+        },
+        {
+          "text": "INVERT SYRUP MAIZE STARCH. CASHEW NUTS (1%). RAISING AGENTS (INS 503(I). INS",
+          "confidence": 0.947,
+          "box": [
+            122,
+            205,
+            570,
+            231
+          ],
+          "sharpness": 2926.4,
+          "quality": "GOOD"
+        },
+        {
+          "text": "500(). IODISED SALT, BUTTER (0.4%). MILK SOLIDS, EMULSIFIERS (INS 322. INS 471.",
+          "confidence": 0.936,
+          "box": [
+            122,
+            226,
+            569,
+            252
+          ],
+          "sharpness": 3127.49,
+          "quality": "GOOD"
+        },
+        {
+          "text": "INS 472e). ACIDITY REGULATOR [INS 450(0). ARTIFICIAL FLAVOURING SUBSTANCES",
+          "confidence": 0.982,
+          "box": [
+            120,
+            245,
+            569,
+            275
+          ],
+          "sharpness": 3581.76,
+          "quality": "GOOD"
+        },
+        {
+          "text": "(BUTTERMILK.VANILLA), NATURALCOLOUR (INS 160D).DOUGH CONDITIONER (INS223)",
+          "confidence": 0.81,
+          "box": [
+            120,
+            265,
+            566,
+            297
+          ],
+          "sharpness": 3926.73,
+          "quality": "GOOD"
+        },
+        {
+          "text": "CONTAINS WHEAT, MILK, SOY, SULPHITE & NUTS.",
+          "confidence": 0.984,
+          "box": [
+            118,
+            287,
+            370,
+            317
+          ],
+          "sharpness": 4667.75,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Nutrition Information",
+          "confidence": 1.0,
+          "box": [
+            119,
+            323,
+            298,
+            364
+          ],
+          "sharpness": 2810.69,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Servings per pack: about 5",
+          "confidence": 1.0,
+          "box": [
+            307,
+            322,
+            430,
+            345
+          ],
+          "sharpness": 5064.05,
+          "quality": "GOOD"
+        },
+        {
+          "text": "^Guideline",
+          "confidence": 0.968,
+          "box": [
+            491,
+            331,
+            554,
+            359
+          ],
+          "sharpness": 2853.5,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Serving Sze: 20 g (about 4 biscuts)",
+          "confidence": 0.76,
+          "box": [
+            306,
+            341,
+            463,
+            365
+          ],
+          "sharpness": 4283.56,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Daily Amount",
+          "confidence": 0.998,
+          "box": [
+            487,
+            356,
+            559,
+            381
+          ],
+          "sharpness": 4156.62,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Amount",
+          "confidence": 1.0,
+          "box": [
+            229,
+            368,
+            271,
+            388
+          ],
+          "sharpness": 7330.99,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Per Serve",
+          "confidence": 1.0,
+          "box": [
+            269,
+            369,
+            312,
+            390
+          ],
+          "sharpness": 6835.84,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Amount Per Serve",
+          "confidence": 0.998,
+          "box": [
+            403,
+            371,
+            484,
+            394
+          ],
+          "sharpness": 6779.29,
+          "quality": "GOOD"
+        },
+        {
+          "text": "per 100 g",
+          "confidence": 0.992,
+          "box": [
+            222,
+            384,
+            269,
+            403
+          ],
+          "sharpness": 6873.95,
+          "quality": "GOOD"
+        },
+        {
+          "text": "%RDA",
+          "confidence": 0.98,
+          "box": [
+            262,
+            382,
+            310,
+            409
+          ],
+          "sharpness": 7108.45,
+          "quality": "GOOD"
+        },
+        {
+          "text": "per 100 g % RDA^",
+          "confidence": 0.942,
+          "box": [
+            394,
+            386,
+            482,
+            410
+          ],
+          "sharpness": 7719.34,
+          "quality": "GOOD"
+        },
+        {
+          "text": "of an average",
+          "confidence": 0.992,
+          "box": [
+            484,
+            378,
+            559,
+            405
+          ],
+          "sharpness": 3550.57,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Energy",
+          "confidence": 1.0,
+          "box": [
+            120,
+            402,
+            165,
+            430
+          ],
+          "sharpness": 3857.83,
+          "quality": "GOOD"
+        },
+        {
+          "text": "481",
+          "confidence": 1.0,
+          "box": [
+            235,
+            408,
+            263,
+            428
+          ],
+          "sharpness": 6506.64,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Dietary Fiber",
+          "confidence": 0.986,
+          "box": [
+            323,
+            407,
+            393,
+            431
+          ],
+          "sharpness": 7411.31,
+          "quality": "GOOD"
+        },
+        {
+          "text": "1.5g",
+          "confidence": 0.997,
+          "box": [
+            403,
+            408,
+            441,
+            433
+          ],
+          "sharpness": 4916.32,
+          "quality": "GOOD"
+        },
+        {
+          "text": "adult (based",
+          "confidence": 0.982,
+          "box": [
+            485,
+            401,
+            553,
+            425
+          ],
+          "sharpness": 5044.15,
+          "quality": "GOOD"
+        },
+        {
+          "text": "5%",
+          "confidence": 1.0,
+          "box": [
+            278,
+            411,
+            301,
+            429
+          ],
+          "sharpness": 8705.97,
+          "quality": "GOOD"
+        },
+        {
+          "text": "kcal",
+          "confidence": 1.0,
+          "box": [
+            232,
+            428,
+            262,
+            448
+          ],
+          "sharpness": 7802.71,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Total Fat",
+          "confidence": 1.0,
+          "box": [
+            314,
+            431,
+            363,
+            453
+          ],
+          "sharpness": 10833.84,
+          "quality": "GOOD"
+        },
+        {
+          "text": "18.5g 6%",
+          "confidence": 1.0,
+          "box": [
+            401,
+            432,
+            477,
+            457
+          ],
+          "sharpness": 6577.58,
+          "quality": "GOOD"
+        },
+        {
+          "text": "on 2000 kcal",
+          "confidence": 0.982,
+          "box": [
+            485,
+            423,
+            554,
+            448
+          ],
+          "sharpness": 5351.38,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Protein",
+          "confidence": 1.0,
+          "box": [
+            122,
+            447,
+            169,
+            471
+          ],
+          "sharpness": 4965.15,
+          "quality": "GOOD"
+        },
+        {
+          "text": "diet).",
+          "confidence": 0.989,
+          "box": [
+            481,
+            443,
+            514,
+            471
+          ],
+          "sharpness": 4681.99,
+          "quality": "GOOD"
+        },
+        {
+          "text": "6g",
+          "confidence": 0.66,
+          "box": [
+            243,
+            455,
+            265,
+            474
+          ],
+          "sharpness": 7002.41,
+          "quality": "GOOD"
+        },
+        {
+          "text": "atr d fat",
+          "confidence": 0.764,
+          "box": [
+            322,
+            454,
+            392,
+            476
+          ],
+          "sharpness": 11025.95,
+          "quality": "GOOD"
+        },
+        {
+          "text": "8.798%",
+          "confidence": 0.759,
+          "box": [
+            403,
+            454,
+            476,
+            482
+          ],
+          "sharpness": 8458.09,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Éarrate",
+          "confidence": 0.793,
+          "box": [
+            122,
+            470,
+            201,
+            495
+          ],
+          "sharpness": 7183.41,
+          "quality": "GOOD"
+        },
+        {
+          "text": "72g",
+          "confidence": 0.924,
+          "box": [
+            235,
+            473,
+            266,
+            499
+          ],
+          "sharpness": 8616.35,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Trans fat",
+          "confidence": 0.94,
+          "box": [
+            323,
+            478,
+            371,
+            497
+          ],
+          "sharpness": 12712.63,
+          "quality": "GOOD"
+        },
+        {
+          "text": "0g",
+          "confidence": 0.999,
+          "box": [
+            414,
+            478,
+            442,
+            502
+          ],
+          "sharpness": 7783.12,
+          "quality": "GOOD"
+        },
+        {
+          "text": "0%",
+          "confidence": 1.0,
+          "box": [
+            446,
+            481,
+            472,
+            501
+          ],
+          "sharpness": 12763.66,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Total Sugars",
+          "confidence": 1.0,
+          "box": [
+            133,
+            493,
+            201,
+            517
+          ],
+          "sharpness": 7676.67,
+          "quality": "GOOD"
+        },
+        {
+          "text": "非",
+          "confidence": 0.603,
+          "box": [
+            485,
+            487,
+            498,
+            503
+          ],
+          "sharpness": 5870.92,
+          "quality": "GOOD"
+        },
+        {
+          "text": "25 g",
+          "confidence": 0.89,
+          "box": [
+            236,
+            497,
+            265,
+            519
+          ],
+          "sharpness": 9984.55,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Cholesterol",
+          "confidence": 1.0,
+          "box": [
+            312,
+            498,
+            376,
+            522
+          ],
+          "sharpness": 11675.39,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Approximate",
+          "confidence": 0.954,
+          "box": [
+            493,
+            490,
+            553,
+            512
+          ],
+          "sharpness": 6066.69,
+          "quality": "GOOD"
+        },
+        {
+          "text": "1.2 mg",
+          "confidence": 0.996,
+          "box": [
+            396,
+            502,
+            437,
+            524
+          ],
+          "sharpness": 8812.48,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Added sugars",
+          "confidence": 0.981,
+          "box": [
+            133,
+            515,
+            208,
+            539
+          ],
+          "sharpness": 9267.9,
+          "quality": "GOOD"
+        },
+        {
+          "text": "24.4 g 10%",
+          "confidence": 0.988,
+          "box": [
+            224,
+            518,
+            301,
+            542
+          ],
+          "sharpness": 9618.97,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Sodium",
+          "confidence": 1.0,
+          "box": [
+            308,
+            520,
+            357,
+            544
+          ],
+          "sharpness": 11045.23,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Values",
+          "confidence": 1.0,
+          "box": [
+            498,
+            513,
+            534,
+            536
+          ],
+          "sharpness": 6114.36,
+          "quality": "GOOD"
+        },
+        {
+          "text": "275 mg",
+          "confidence": 0.996,
+          "box": [
+            391,
+            524,
+            437,
+            546
+          ],
+          "sharpness": 8337.94,
+          "quality": "GOOD"
+        },
+        {
+          "text": "3%",
+          "confidence": 1.0,
+          "box": [
+            445,
+            526,
+            471,
+            546
+          ],
+          "sharpness": 8685.16,
+          "quality": "GOOD"
+        },
+        {
+          "text": "fssaí",
+          "confidence": 0.955,
+          "box": [
+            308,
+            546,
+            368,
+            579
+          ],
+          "sharpness": 6197.11,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Lic. No.: 10016063000826",
+          "confidence": 0.991,
+          "box": [
+            230,
+            572,
+            434,
+            601
+          ],
+          "sharpness": 5857.8,
+          "quality": "GOOD"
+        },
+        {
+          "text": "MARKETED BY: MRS. BECTORS FOOD SPECIALITIES LTD.",
+          "confidence": 1.0,
+          "box": [
+            111,
+            596,
+            514,
+            630
+          ],
+          "sharpness": 5159.83,
+          "quality": "GOOD"
+        },
+        {
+          "text": "THEING ROAD, PHILLAUR-144410, DISTT. JALANDHAR (PB.)",
+          "confidence": 0.998,
+          "box": [
+            110,
+            619,
+            535,
+            657
+          ],
+          "sharpness": 6119.63,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Fomaufacu i me, ade &FA LN,adhe r are",
+          "confidence": 0.602,
+          "box": [
+            110,
+            643,
+            526,
+            676
+          ],
+          "sharpness": 7847.91,
+          "quality": "GOOD"
+        },
+        {
+          "text": "of the lot number and see below:",
+          "confidence": 1.0,
+          "box": [
+            110,
+            663,
+            287,
+            687
+          ],
+          "sharpness": 9827.9,
+          "quality": "GOOD"
+        },
+        {
+          "text": "A-MFD.BY: MRS.BECTORS FOOD SPECIALITIES LTD.,THEINGROAD, PHILLAUR",
+          "confidence": 0.941,
+          "box": [
+            108,
+            684,
+            513,
+            719
+          ],
+          "sharpness": 7141.77,
+          "quality": "GOOD"
+        },
+        {
+          "text": "JALANDHAR, PUNJAB-144410-Lic. No.-10012063000050",
+          "confidence": 0.967,
+          "box": [
+            126,
+            712,
+            423,
+            741
+          ],
+          "sharpness": 8717.25,
+          "quality": "GOOD"
+        },
+        {
+          "text": "B-MFD.BY:MRS.BECTORS FOOD SPECIALITIES LTD.,PLOT NO.13,INDUSTRIALAREA",
+          "confidence": 0.892,
+          "box": [
+            109,
+            738,
+            544,
+            771
+          ],
+          "sharpness": 7506.37,
+          "quality": "GOOD"
+        },
+        {
+          "text": "TAHLIWAL,HAROLI, UNA, HIMACHAL PRADESH-174301-Lic.No.-10012062000169",
+          "confidence": 0.958,
+          "box": [
+            128,
+            765,
+            540,
+            796
+          ],
+          "sharpness": 8367.36,
+          "quality": "GOOD"
+        },
+        {
+          "text": "C-MFD.BY: MRS.BECTORS FOOD SPECIALITIES LTD., VILLAGE GOBINDGARH, DAKHLI",
+          "confidence": 0.931,
+          "box": [
+            108,
+            791,
+            539,
+            822
+          ],
+          "sharpness": 8157.21,
+          "quality": "GOOD"
+        },
+        {
+          "text": "KAMMIKALAN,SUB-TEHSIL-GHANAUR,TEHSIL-RAJPURA,DISTTPATIALA,PUNJAB",
+          "confidence": 0.986,
+          "box": [
+            126,
+            818,
+            538,
+            847
+          ],
+          "sharpness": 7764.93,
+          "quality": "GOOD"
+        },
+        {
+          "text": "-140702-Lic. No.-10018063001211",
+          "confidence": 0.985,
+          "box": [
+            127,
+            845,
+            310,
+            869
+          ],
+          "sharpness": 9088.55,
+          "quality": "GOOD"
+        },
+        {
+          "text": "D-MFD.BY:MRS.BECTORS FOOD SPECIALITIES LTD.,PLOT NO.2 INTEGRATED",
+          "confidence": 0.932,
+          "box": [
+            106,
+            871,
+            502,
+            897
+          ],
+          "sharpness": 8093.37,
+          "quality": "GOOD"
+        },
+        {
+          "text": "INDUSTRIAL PARK, PITHAMPUR,DHAR,MADHYA PRADESH-454774",
+          "confidence": 0.944,
+          "box": [
+            127,
+            898,
+            456,
+            922
+          ],
+          "sharpness": 8214.91,
+          "quality": "GOOD"
+        },
+        {
+          "text": "- Lic. No. -11424999000315",
+          "confidence": 0.943,
+          "box": [
+            125,
+            921,
+            271,
+            948
+          ],
+          "sharpness": 6551.01,
+          "quality": "GOOD"
+        },
+        {
+          "text": "For any Feedback / Suggestion, please contact our Executive",
+          "confidence": 0.986,
+          "box": [
+            104,
+            947,
+            530,
+            980
+          ],
+          "sharpness": 4914.3,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Customer Care Cell, Ph. 1-800-1802045 (Toll Free), Address -",
+          "confidence": 0.967,
+          "box": [
+            103,
+            973,
+            530,
+            1006
+          ],
+          "sharpness": 4354.93,
+          "quality": "GOOD"
+        },
+        {
+          "text": "same as MARKETED BY address, email bscuts@emica.in",
+          "confidence": 0.727,
+          "box": [
+            103,
+            999,
+            528,
+            1036
+          ],
+          "sharpness": 4399.56,
+          "quality": "GOOD"
+        },
+        {
+          "text": "webte:.cemca.nusn@CemaBu",
+          "confidence": 0.616,
+          "box": [
+            102,
+            1027,
+            526,
+            1066
+          ],
+          "sharpness": 4132.59,
+          "quality": "GOOD"
+        }
+      ]
+    },
+    {
+      "file": "pic_2.jpg",
+      "ocr": [
+        {
+          "text": "Mrs. Bector's",
+          "confidence": 0.933,
+          "box": [
+            706,
+            406,
+            963,
+            517
+          ],
+          "sharpness": 55.24,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "AICA",
+          "confidence": 0.943,
+          "box": [
+            824,
+            558,
+            1014,
+            672
+          ],
+          "sharpness": 37.18,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "OPEN HERE",
+          "confidence": 0.996,
+          "box": [
+            295,
+            576,
+            473,
+            635
+          ],
+          "sharpness": 36.46,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "W",
+          "confidence": 0.993,
+          "box": [
+            958,
+            739,
+            1082,
+            856
+          ],
+          "sharpness": 75.08,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "COOKIES",
+          "confidence": 0.998,
+          "box": [
+            610,
+            827,
+            1117,
+            972
+          ],
+          "sharpness": 61.18,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Mrs. Bector's",
+          "confidence": 0.98,
+          "box": [
+            633,
+            1071,
+            993,
+            1194
+          ],
+          "sharpness": 126.42,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "BISCUITS",
+          "confidence": 0.887,
+          "box": [
+            1217,
+            1199,
+            1374,
+            1251
+          ],
+          "sharpness": 386.4,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "R",
+          "confidence": 0.99,
+          "box": [
+            1101,
+            1217,
+            1129,
+            1244
+          ],
+          "sharpness": 944.17,
+          "quality": "GOOD"
+        },
+        {
+          "text": "R'S",
+          "confidence": 0.711,
+          "box": [
+            694,
+            1238,
+            907,
+            1279
+          ],
+          "sharpness": 203.13,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "REI",
+          "confidence": 0.774,
+          "box": [
+            544,
+            1256,
+            1056,
+            1415
+          ],
+          "sharpness": 87.39,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "AE",
+          "confidence": 0.678,
+          "box": [
+            482,
+            1459,
+            1146,
+            1688
+          ],
+          "sharpness": 117.34,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "COIES",
+          "confidence": 0.917,
+          "box": [
+            453,
+            1611,
+            1175,
+            1829
+          ],
+          "sharpness": 141.47,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Extra Crisp",
+          "confidence": 0.998,
+          "box": [
+            609,
+            2192,
+            973,
+            2302
+          ],
+          "sharpness": 108.19,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Biscuits",
+          "confidence": 0.946,
+          "box": [
+            675,
+            2275,
+            921,
+            2356
+          ],
+          "sharpness": 99.48,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Images for illustration purpose only",
+          "confidence": 0.999,
+          "box": [
+            178,
+            3149,
+            743,
+            3209
+          ],
+          "sharpness": 251.09,
+          "quality": "QUESTIONABLE"
+        }
+      ]
+    },
+    {
+      "file": "pic_3.jpg",
+      "ocr": [
+        {
+          "text": "Mrs. Bector's",
+          "confidence": 0.994,
+          "box": [
+            269,
+            102,
+            427,
+            156
+          ],
+          "sharpness": 323.26,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "MRS. BECTOR'S",
+          "confidence": 0.995,
+          "box": [
+            293,
+            176,
+            392,
+            200
+          ],
+          "sharpness": 364.08,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "CREMICA",
+          "confidence": 1.0,
+          "box": [
+            236,
+            189,
+            451,
+            256
+          ],
+          "sharpness": 255.12,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "CASHEW",
+          "confidence": 1.0,
+          "box": [
+            219,
+            264,
+            479,
+            349
+          ],
+          "sharpness": 245.11,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "COOKIES",
+          "confidence": 0.934,
+          "box": [
+            209,
+            325,
+            489,
+            409
+          ],
+          "sharpness": 368.77,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Store in a cool & dry place bu no in rerigerated condtion",
+          "confidence": 0.869,
+          "box": [
+            174,
+            581,
+            219,
+            999
+          ],
+          "sharpness": 2300.09,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Expiry:",
+          "confidence": 1.0,
+          "box": [
+            220,
+            583,
+            251,
+            641
+          ],
+          "sharpness": 5026.47,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Date of",
+          "confidence": 1.0,
+          "box": [
+            243,
+            584,
+            274,
+            645
+          ],
+          "sharpness": 6156.27,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Lot No.",
+          "confidence": 1.0,
+          "box": [
+            281,
+            586,
+            307,
+            644
+          ],
+          "sharpness": 6665.69,
+          "quality": "GOOD"
+        },
+        {
+          "text": "of Mfg.",
+          "confidence": 1.0,
+          "box": [
+            299,
+            586,
+            331,
+            647
+          ],
+          "sharpness": 7424.06,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Date",
+          "confidence": 1.0,
+          "box": [
+            321,
+            587,
+            351,
+            630
+          ],
+          "sharpness": 6530.03,
+          "quality": "GOOD"
+        },
+        {
+          "text": "All Taxes)",
+          "confidence": 0.951,
+          "box": [
+            353,
+            589,
+            380,
+            658
+          ],
+          "sharpness": 6877.16,
+          "quality": "GOOD"
+        },
+        {
+          "text": "(Incl. of",
+          "confidence": 0.967,
+          "box": [
+            373,
+            592,
+            396,
+            648
+          ],
+          "sharpness": 7718.49,
+          "quality": "GOOD"
+        },
+        {
+          "text": "MRP:",
+          "confidence": 0.855,
+          "box": [
+            387,
+            590,
+            420,
+            666
+          ],
+          "sharpness": 5684.39,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Net Weight",
+          "confidence": 1.0,
+          "box": [
+            432,
+            591,
+            467,
+            689
+          ],
+          "sharpness": 4839.73,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Biscuits",
+          "confidence": 1.0,
+          "box": [
+            456,
+            594,
+            488,
+            665
+          ],
+          "sharpness": 5349.59,
+          "quality": "GOOD"
+        },
+        {
+          "text": "07.03.27-L6",
+          "confidence": 1.0,
+          "box": [
+            290,
+            723,
+            319,
+            881
+          ],
+          "sharpness": 914.99,
+          "quality": "GOOD"
+        },
+        {
+          "text": "08.06.20/CD08F26",
+          "confidence": 0.879,
+          "box": [
+            304,
+            722,
+            345,
+            966
+          ],
+          "sharpness": 1273.03,
+          "quality": "GOOD"
+        },
+        {
+          "text": "20.00Rs.0.20PER g",
+          "confidence": 0.987,
+          "box": [
+            325,
+            727,
+            366,
+            982
+          ],
+          "sharpness": 1187.14,
+          "quality": "GOOD"
+        },
+        {
+          "text": "6",
+          "confidence": 0.961,
+          "box": [
+            427,
+            747,
+            488,
+            824
+          ],
+          "sharpness": 861.25,
+          "quality": "GOOD"
+        }
+      ]
+    }
+  ]
+}

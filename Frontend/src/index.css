@@ -1469,3 +1469,63 @@ input {
   justify-content: center;
   cursor: pointer;
 }
+/* =========================================================
+   PRODUCT CATEGORY SELECT
+   ========================================================= */
+
+.category-select {
+  width: 320px;
+  max-width: 100%;
+  height: 48px;
+  padding: 0 42px 0 16px;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+
+  background-color: #ffffff;
+  border: 1px solid #d9e1ec;
+  border-radius: 10px;
+
+  outline: none;
+  cursor: pointer;
+
+  margin: 4px auto 30px;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, #64748b 50%),
+    linear-gradient(135deg, #64748b 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) 20px,
+    calc(100% - 14px) 20px;
+  background-size:
+    6px 6px,
+    6px 6px;
+  background-repeat: no-repeat;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.category-select:hover {
+  border-color: #b8c6d9;
+  background-color: #fafcff;
+}
+
+.category-select:focus {
+  border-color: #1769aa;
+  box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.12);
+}
+
+.category-select option {
+  font-family: inherit;
+  font-size: 15px;
+  color: #1e293b;
+  background: #ffffff;
+}
