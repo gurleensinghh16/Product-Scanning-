@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Sidebar from "../../components/Sidebar";
 import StatusBadge from "../../components/StatusBadge";
+import productImage from "../../assets/image.jpg";
 
 import {
   getInspections
@@ -88,16 +89,10 @@ function InspectionHistory() {
                 >
 
                   <div className="history-thumbnail">
-
-                    {inspection.images[0] && (
-
-                      <img
-                        src={inspection.images[0]}
-                        alt={inspection.productName}
-                      />
-
-                    )}
-
+                    <img
+                      src={productImage}
+                      alt={inspection.productName}
+                    />
                   </div>
 
                   <div className="history-product">

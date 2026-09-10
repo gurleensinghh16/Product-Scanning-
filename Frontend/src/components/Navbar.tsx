@@ -1,12 +1,13 @@
-import { ShieldCheck, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 function Navbar() {
   return (
     <nav className="navbar">
 
       <Link to="/" className="logo">
-        <ShieldCheck size={30} />
+        <img src={logo} alt="NIRIKSHAK AI Logo" />
         <span>NIRIKSHAK <b>AI</b></span>
       </Link>
 
