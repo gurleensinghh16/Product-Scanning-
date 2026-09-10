@@ -112,54 +112,152 @@ function ScanProduct() {
   // Send images to OCR backend
   // -------------------------------
   const startAnalysis = async () => {
-    if (files.length === 0) {
-      alert("Please upload or capture at least one image.");
+
+  if (files.length === 0) {
+    alert("Please upload or capture at least one image.");
+    return;
+  }
+
+  // For now we process the first image.
+  // Later we will process all uploaded sides.
+  const image = files[0];
+
+  try {
+
+    // ==========================================
+    // STEP 1 — IMAGE QUALITY
+    // ==========================================
+
+    const qualityFormData = new FormData();
+
+    qualityFormData.append(
+      "image",
+      image
+    );
+
+    const qualityResponse = await fetch(
+      "http://localhost:5001/api/image-quality",
+      {
+        method: "POST",
+        body: qualityFormData
+      }
+    );
+
+    if (!qualityResponse.ok) {
+      throw new Error(
+        "Image quality request failed"
+      );
+    }
+
+    const imageQuality =
+      await qualityResponse.json();
+
+    console.log(
+      "IMAGE QUALITY:",
+      imageQuality
+    );
+
+
+    // Save image quality result
+    sessionStorage.setItem(
+      "imageQualityResult",
+      JSON.stringify(imageQuality)
+    );
+
+
+    // ==========================================
+    // STEP 2 — CHECK IMAGE QUALITY
+    // ==========================================
+
+    const resolutionPassed =
+      imageQuality.checks?.resolution;
+
+    const brightnessPassed =
+      imageQuality.checks?.brightness;
+
+
+    if (
+      !resolutionPassed ||
+      !brightnessPassed
+    ) {
+
+      alert(
+        "Image quality is insufficient. Please capture or upload a clearer image."
+      );
+
       return;
     }
 
-    const formData = new FormData();
 
-    files.forEach((file) => {
-      formData.append("images", file);
-    });
+    // ==========================================
+    // STEP 3 — OCR + SHARPNESS
+    // ==========================================
 
-    try {
-      /*
-        CHANGE THIS URL according to your backend.
+    const ocrFormData = new FormData();
 
-        Example:
-        http://localhost:5000/api/ocr
-      */
+    ocrFormData.append(
+      "image",
+      image
+    );
 
-      const response = await fetch("http://localhost:5000/api/ocr", {
+    const ocrResponse = await fetch(
+      "http://localhost:5001/api/ocr",
+      {
         method: "POST",
-        body: formData
-      });
-
-      if (!response.ok) {
-        throw new Error("OCR request failed");
+        body: ocrFormData
       }
+    );
 
-      const result = await response.json();
 
-      console.log("OCR RESULT:", result);
-
-      // For now we are storing the result temporarily
-      sessionStorage.setItem(
-        "ocrResult",
-        JSON.stringify(result)
-      );
-
-      navigate("/inspector/analysis");
-
-    } catch (error) {
-      console.error("OCR error:", error);
-
-      alert(
-        "Unable to connect to OCR backend. Please check that the backend is running."
+    if (!ocrResponse.ok) {
+      throw new Error(
+        "OCR request failed"
       );
     }
-  };
+
+
+    const ocrResult =
+      await ocrResponse.json();
+
+
+    console.log(
+      "OCR + REGION QUALITY:",
+      ocrResult
+    );
+
+
+    // ==========================================
+    // STEP 4 — SAVE OCR RESULT
+    // ==========================================
+
+    sessionStorage.setItem(
+      "ocrResult",
+      JSON.stringify(ocrResult)
+    );
+
+
+    // ==========================================
+    // STEP 5 — GO TO ANALYSIS
+    // ==========================================
+
+    navigate(
+      "/inspector/analysis"
+    );
+
+
+  } catch (error) {
+
+    console.error(
+      "Inspection analysis error:",
+      error
+    );
+
+    alert(
+      "Unable to analyze the product. Please check that the backend is running."
+    );
+
+  }
+};
 
   return (
     <div className="dashboard-layout">

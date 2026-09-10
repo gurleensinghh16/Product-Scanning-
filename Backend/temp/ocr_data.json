@@ -1,0 +1,192 @@
+[
+    {
+        "text": "MADE IN INDIA",
+        "confidence": 0.927,
+        "box": [
+            218,
+            586,
+            238,
+            744
+        ]
+    },
+    {
+        "text": "  ",
+        "confidence": 0.507,
+        "box": [
+            373,
+            583,
+            637,
+            621
+        ]
+    },
+    {
+        "text": "  ",
+        "confidence": 0.398,
+        "box": [
+            372,
+            604,
+            646,
+            642
+        ]
+    },
+    {
+        "text": "MINIMUM WEIGHT 11:.29g",
+        "confidence": 0.925,
+        "box": [
+            676,
+            608,
+            707,
+            734
+        ]
+    },
+    {
+        "text": "ooo",
+        "confidence": 0.679,
+        "box": [
+            371,
+            625,
+            591,
+            658
+        ]
+    },
+    {
+        "text": " OQR IA    SU",
+        "confidence": 0.525,
+        "box": [
+            370,
+            644,
+            674,
+            682
+        ]
+    },
+    {
+        "text": "REFER THE FIRST TWO CHARACTERS OF THE BAICH NO",
+        "confidence": 0.964,
+        "box": [
+            370,
+            665,
+            679,
+            702
+        ]
+    },
+    {
+        "text": "AND SCAN THE QR CODE.",
+        "confidence": 0.974,
+        "box": [
+            368,
+            684,
+            526,
+            716
+        ]
+    },
+    {
+        "text": "ssa Lic. No.1302990026",
+        "confidence": 0.773,
+        "box": [
+            367,
+            711,
+            585,
+            760
+        ]
+    },
+    {
+        "text": "CONTCTCONSUMERRESPONSECOORDINATORAT:",
+        "confidence": 0.857,
+        "box": [
+            256,
+            742,
+            573,
+            800
+        ]
+    },
+    {
+        "text": "1800-208-2653 indiahelpline@coca-cola.com",
+        "confidence": 0.982,
+        "box": [
+            254,
+            768,
+            573,
+            828
+        ]
+    },
+    {
+        "text": "ADDRESS:SAME AS MFG/MKT BY ADDRESS",
+        "confidence": 0.946,
+        "box": [
+            253,
+            793,
+            525,
+            852
+        ]
+    },
+    {
+        "text": "NECYCLE",
+        "confidence": 0.833,
+        "box": [
+            207,
+            829,
+            239,
+            852
+        ]
+    },
+    {
+        "text": "ORDATEOMANUFACTURE,EXPIRY,BATCHNO",
+        "confidence": 0.773,
+        "box": [
+            248,
+            820,
+            539,
+            886
+        ]
+    },
+    {
+        "text": "USP&MRP(ICL OF ALLTES) SEE NEC",
+        "confidence": 0.821,
+        "box": [
+            246,
+            845,
+            503,
+            911
+        ]
+    },
+    {
+        "text": "Sprite",
+        "confidence": 0.999,
+        "box": [
+            221,
+            865,
+            422,
+            988
+        ]
+    },
+    {
+        "text": "NET QUANTITY:",
+        "confidence": 0.977,
+        "box": [
+            439,
+            914,
+            529,
+            942
+        ]
+    },
+    {
+        "text": "LUMON-LIMEFLAVOURED",
+        "confidence": 0.889,
+        "box": [
+            267,
+            954,
+            374,
+            989
+        ]
+    },
+    {
+        "text": "250 ml",
+        "confidence": 0.993,
+        "box": [
+            435,
+            951,
+            523,
+            986
+        ]
+    }
+]

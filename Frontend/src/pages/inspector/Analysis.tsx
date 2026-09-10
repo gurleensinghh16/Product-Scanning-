@@ -1,29 +1,29 @@
-import { CheckCircle2, LoaderCircle, ScanText } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import Sidebar from "../../components/Sidebar";
 import { useEffect, useState } from "react";
 
 function Analysis() {
-
-  const [progress, setProgress] = useState(0);
+  const [imageQuality, setImageQuality] = useState<any>(null);
+  const [ocrResult, setOcrResult] = useState<any>(null);
 
   useEffect(() => {
+    const storedImageQuality =
+      sessionStorage.getItem("imageQualityResult");
 
-    const interval = setInterval(() => {
+    const storedOCR =
+      sessionStorage.getItem("ocrResult");
 
-      setProgress((previous) => {
+    if (storedImageQuality) {
+      setImageQuality(
+        JSON.parse(storedImageQuality)
+      );
+    }
 
-        if (previous >= 100) {
-          clearInterval(interval);
-          return 100;
-        }
-
-        return previous + 10;
-      });
-
-    }, 300);
-
-    return () => clearInterval(interval);
-
+    if (storedOCR) {
+      setOcrResult(
+        JSON.parse(storedOCR)
+      );
+    }
   }, []);
 
   return (
@@ -33,6 +33,10 @@ function Analysis() {
 
       <main className="dashboard">
 
+        {/* ============================= */}
+        {/* PAGE HEADER */}
+        {/* ============================= */}
+
         <div className="page-header">
 
           <p className="eyebrow">
@@ -40,92 +44,209 @@ function Analysis() {
           </p>
 
           <h1>
-            Analyzing Product
+            Image & OCR Analysis
           </h1>
 
           <p>
-            Extracting declarations and checking applicable compliance rules.
+            Checking image quality and extracting
+            product declarations.
           </p>
 
         </div>
 
+
+        {/* ============================= */}
+        {/* IMAGE QUALITY */}
+        {/* ============================= */}
+
         <div className="analysis-card">
 
           <div className="analysis-icon">
-            {progress < 100
-              ? <LoaderCircle size={50} className="spin" />
-              : <CheckCircle2 size={50} />
-            }
+            <CheckCircle2 size={50} />
           </div>
 
           <h2>
-            {progress < 100
-              ? "Processing Product..."
-              : "Analysis Complete"}
+            Image Quality Check Complete
           </h2>
 
-          <div className="progress-bar">
+          {imageQuality && (
 
-            <div
-              className="progress-fill"
-              style={{ width: `${progress}%` }}
-            />
+            <div className="image-quality-results">
 
-          </div>
+              {/* Resolution */}
 
-          <span>
-            {progress}% complete
-          </span>
+              <div className="quality-result">
 
-          <div className="analysis-steps">
+                <h3>
+                  Resolution
+                </h3>
 
-            <AnalysisStep
-              title="Image Processing"
-              complete={progress >= 20}
-            />
+                <p>
+                  {imageQuality.image.width}
+                  {" × "}
+                  {imageQuality.image.height}
+                </p>
 
-            <AnalysisStep
-              title="OCR Declaration Extraction"
-              complete={progress >= 50}
-            />
+                <strong>
+                  {imageQuality.checks.resolution
+                    ? "PASS"
+                    : "NEEDS REVIEW"}
+                </strong>
 
-            <AnalysisStep
-              title="Rule Applicability Check"
-              complete={progress >= 80}
-            />
+              </div>
 
-            <AnalysisStep
-              title="Compliance Evaluation"
-              complete={progress >= 100}
-            />
 
-          </div>
+              {/* Brightness */}
+
+              <div className="quality-result">
+
+                <h3>
+                  Brightness
+                </h3>
+
+                <p>
+                  {imageQuality.scores.brightness}
+                </p>
+
+                <strong>
+                  {imageQuality.checks.brightness
+                    ? "PASS"
+                    : "NEEDS REVIEW"}
+                </strong>
+
+              </div>
+
+            </div>
+
+          )}
 
         </div>
 
+
+        {/* ============================= */}
+        {/* OCR + REGION QUALITY */}
+        {/* ============================= */}
+
+        {ocrResult && (
+
+          <div className="analysis-card ocr-results">
+
+            <div className="analysis-icon">
+              <CheckCircle2 size={40} />
+            </div>
+
+            <h2>
+              OCR & Region Quality
+            </h2>
+
+            <p>
+              Detected regions:{" "}
+              <strong>
+                {ocrResult.ocr.length}
+              </strong>
+            </p>
+
+
+            {/* OCR REGIONS */}
+
+            <div className="ocr-list">
+
+              {ocrResult.ocr.map(
+                (region: any, index: number) => (
+
+                  <div
+                    className="ocr-result"
+                    key={index}
+                  >
+
+                    {/* Detected text */}
+
+                    <h3>
+                      {region.text ||
+                        "No text detected"}
+                    </h3>
+
+
+                    <div className="ocr-details">
+
+                      {/* Confidence */}
+
+                      <div>
+
+                        <span>
+                          Confidence
+                        </span>
+
+                        <strong>
+                          {(
+                            region.confidence * 100
+                          ).toFixed(1)}
+                          %
+                        </strong>
+
+                      </div>
+
+
+                      {/* Sharpness */}
+
+                      <div>
+
+                        <span>
+                          Sharpness
+                        </span>
+
+                        <strong>
+                          {region.sharpness}
+                        </strong>
+
+                      </div>
+
+
+                      {/* Quality */}
+
+                      <div>
+
+                        <span>
+                          Quality
+                        </span>
+
+                        <strong>
+                          {region.quality}
+                        </strong>
+
+                      </div>
+
+                    </div>
+
+
+                    {/* Bounding Box */}
+
+                    <div className="ocr-box">
+
+                      <span>
+                        Bounding Box
+                      </span>
+
+                      <p>
+                        [
+                        {region.box.join(", ")}
+                        ]
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                )
+              )}
+
+            </div>
+
+          </div>
+
+        )}
+
       </main>
-
-    </div>
-  );
-}
-
-function AnalysisStep({
-  title,
-  complete
-}: {
-  title: string;
-  complete: boolean;
-}) {
-
-  return (
-    <div className="analysis-step">
-
-      {complete
-        ? <CheckCircle2 size={20} />
-        : <ScanText size={20} />
-      }
-
-      <span>{title}</span>
 
     </div>
   );

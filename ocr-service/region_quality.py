@@ -1,41 +1,87 @@
 import cv2
 import json
-import os
+import sys
+
 
 MIN_OCR_CONFIDENCE = 0.60
 MIN_SHARPNESS = 500
 
-IMAGE_PATH = "ocr-service/real-test.jpg"
-OCR_DATA_PATH = "ocr-service/ocr_data.json"
-OUTPUT_PATH = "ocr-service/validated_ocr.json"
 
-with open(OCR_DATA_PATH, "r", encoding="utf-8") as file:
-    ocr_data = json.load(file)
+# --------------------------------
+# Check arguments
+# --------------------------------
+
+if len(sys.argv) < 3:
+    print("ERROR: Image path and OCR data path are required")
+    sys.exit(1)
+
+
+IMAGE_PATH = sys.argv[1]
+OCR_DATA_PATH = sys.argv[2]
+
+
+# --------------------------------
+# Read OCR data
+# --------------------------------
+
+try:
+
+    with open(
+        OCR_DATA_PATH,
+        "r",
+        encoding="utf-8"
+    ) as file:
+
+        ocr_data = json.load(file)
+
+except Exception as error:
+
+    print(f"ERROR: Could not read OCR data: {error}")
+    sys.exit(1)
+
+
+# --------------------------------
+# Read image
+# --------------------------------
 
 image = cv2.imread(IMAGE_PATH)
 
 if image is None:
-    print("Could not read image.")
-    exit()
+    print("ERROR: Could not read image")
+    sys.exit(1)
+
 
 validated_data = []
+
+
+# --------------------------------
+# Check EVERY OCR region
+# --------------------------------
 
 for index, region in enumerate(ocr_data):
 
     text = region["text"]
-    confidence = region["confidence"]
+    confidence = float(region["confidence"])
 
     x1, y1, x2, y2 = region["box"]
 
+    # Crop OCR region
     crop = image[y1:y2, x1:x2]
 
     if crop.size == 0:
+
         quality = "POOR"
         sharpness = 0
 
     else:
-        gray = cv2.cvtColor(crop, cv2.COLOR_BGR2GRAY)
 
+        # Convert crop to grayscale
+        gray = cv2.cvtColor(
+            crop,
+            cv2.COLOR_BGR2GRAY
+        )
+
+        # Calculate Laplacian variance
         laplacian = cv2.Laplacian(
             gray,
             cv2.CV_64F
@@ -43,49 +89,66 @@ for index, region in enumerate(ocr_data):
 
         sharpness = laplacian.var()
 
+        # --------------------------------
+        # Quality decision
+        # --------------------------------
+
         if (
             confidence >= MIN_OCR_CONFIDENCE
             and sharpness >= MIN_SHARPNESS
         ):
+
             quality = "GOOD"
 
         elif (
             confidence >= MIN_OCR_CONFIDENCE
             or sharpness >= MIN_SHARPNESS
         ):
+
             quality = "QUESTIONABLE"
 
         else:
+
             quality = "POOR"
 
+
+    # --------------------------------
+    # Save region result
+    # --------------------------------
+
     validated_data.append({
+
         "text": text,
-        "confidence": round(float(confidence), 3),
-        "sharpness": round(float(sharpness), 2),
+
+        "confidence": round(
+            confidence,
+            3
+        ),
+
+        "sharpness": round(
+            float(sharpness),
+            2
+        ),
+
         "quality": quality,
-        "box": [x1, y1, x2, y2]
+
+        "box": [
+            x1,
+            y1,
+            x2,
+            y2
+        ]
+
     })
 
-    print("----------------------------------------")
-    print(f"Region     : {index}")
-    print(f"Text       : {text}")
-    print(f"Confidence : {confidence:.3f}")
-    print(f"Sharpness  : {sharpness:.2f}")
-    print(f"Quality    : {quality}")
 
-with open(
-    OUTPUT_PATH,
-    "w",
-    encoding="utf-8"
-) as file:
+# --------------------------------
+# Return JSON to Node
+# --------------------------------
 
-    json.dump(
+print(
+    json.dumps(
         validated_data,
-        file,
-        indent=4,
         ensure_ascii=False
     )
-
-print("----------------------------------------")
-print("Region quality analysis completed.")
-print(f"Validated OCR saved to: {OUTPUT_PATH}")
+)
