@@ -49,6 +49,13 @@ input {
   font-weight: 700;
 }
 
+.logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  display: block;
+}
+
 .logo svg {
   color: #1769aa;
 }
