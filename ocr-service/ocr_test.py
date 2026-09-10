@@ -1,6 +1,31 @@
 from paddleocr import PaddleOCR
 import cv2
 import json
+import sys
+
+
+# --------------------------------
+# Configuration
+# --------------------------------
+
+MIN_OCR_CONFIDENCE = 0.60
+MIN_SHARPNESS = 500
+
+
+# --------------------------------
+# Get image path
+# --------------------------------
+
+if len(sys.argv) < 2:
+    print("ERROR: Image path not provided", file=sys.stderr)
+    sys.exit(1)
+
+image_path = sys.argv[1]
+
+
+# --------------------------------
+# Initialize PaddleOCR
+# --------------------------------
 
 ocr = PaddleOCR(
     lang="en",
@@ -8,13 +33,31 @@ ocr = PaddleOCR(
     use_doc_unwarping=False
 )
 
-image_path = "ocr-service/real-test.jpg"
 
-result = ocr.predict(image_path)
+# --------------------------------
+# Read image
+# --------------------------------
 
 image = cv2.imread(image_path)
 
-ocr_data = []
+if image is None:
+    print("ERROR: Could not read image", file=sys.stderr)
+    sys.exit(1)
+
+
+# --------------------------------
+# Run OCR
+# --------------------------------
+
+result = ocr.predict(image_path)
+
+
+final_data = []
+
+
+# --------------------------------
+# Process EVERY OCR region
+# --------------------------------
 
 for res in result:
 
@@ -24,59 +67,103 @@ for res in result:
 
     for text, score, box in zip(texts, scores, boxes):
 
+        confidence = float(score)
+
         x1, y1, x2, y2 = map(int, box)
 
-        # Save OCR information
-        ocr_data.append({
+        # ----------------------------
+        # Crop OCR region
+        # ----------------------------
+
+        crop = image[y1:y2, x1:x2]
+
+        if crop.size == 0:
+
+            sharpness = 0
+            quality = "POOR"
+
+        else:
+
+            # ----------------------------
+            # Convert to grayscale
+            # ----------------------------
+
+            gray = cv2.cvtColor(
+                crop,
+                cv2.COLOR_BGR2GRAY
+            )
+
+            # ----------------------------
+            # Laplacian variance
+            # ----------------------------
+
+            laplacian = cv2.Laplacian(
+                gray,
+                cv2.CV_64F
+            )
+
+            sharpness = float(laplacian.var())
+
+            # ----------------------------
+            # Quality classification
+            # ----------------------------
+
+            if (
+                confidence >= MIN_OCR_CONFIDENCE
+                and sharpness >= MIN_SHARPNESS
+            ):
+
+                quality = "GOOD"
+
+            elif (
+                confidence >= MIN_OCR_CONFIDENCE
+                or sharpness >= MIN_SHARPNESS
+            ):
+
+                quality = "QUESTIONABLE"
+
+            else:
+
+                quality = "POOR"
+
+
+        # ----------------------------
+        # Store enriched OCR result
+        # ----------------------------
+
+        final_data.append({
+
             "text": text,
-            "confidence": round(float(score), 3),
-            "box": [x1, y1, x2, y2]
+
+            "confidence": round(
+                confidence,
+                3
+            ),
+
+            "box": [
+                x1,
+                y1,
+                x2,
+                y2
+            ],
+
+            "sharpness": round(
+                sharpness,
+                2
+            ),
+
+            "quality": quality
+
         })
 
-        # Draw box on image
-        cv2.rectangle(
-            image,
-            (x1, y1),
-            (x2, y2),
-            (0, 255, 0),
-            3
-        )
 
-        # Draw detected text
-        cv2.putText(
-            image,
-            text,
-            (x1, max(y1 - 10, 20)),
-            cv2.FONT_HERSHEY_SIMPLEX,
-            0.7,
-            (0, 255, 0),
-            2
-        )
+# --------------------------------
+# Return ONE JSON result
+# --------------------------------
 
-
-# Save annotated image
-cv2.imwrite(
-    "ocr-service/ocr_result.jpg",
-    image
-)
-
-
-# Save OCR data as JSON
-with open(
-    "ocr-service/ocr_data.json",
-    "w",
-    encoding="utf-8"
-) as file:
-
-    json.dump(
-        ocr_data,
-        file,
-        indent=4,
+print(
+    json.dumps(
+        final_data,
         ensure_ascii=False
     )
-
-
-print("OCR completed.")
-print("Result saved as: ocr-service/ocr_result.jpg")
-print("OCR data saved as: ocr-service/ocr_data.json")
-print(f"Detected text regions: {len(ocr_data)}")
+)

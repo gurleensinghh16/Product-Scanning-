@@ -112,46 +112,150 @@ function ScanProduct() {
   // Send images to OCR backend
   // -------------------------------
   const startAnalysis = async () => {
+
   if (files.length === 0) {
     alert("Please upload or capture at least one image.");
     return;
   }
 
-  const formData = new FormData();
-
-  // For now, test with the first image only
-  formData.append("image", files[0]);
+  // For now we process the first image.
+  // Later we will process all uploaded sides.
+  const image = files[0];
 
   try {
-    const response = await fetch(
+
+    // ==========================================
+    // STEP 1 — IMAGE QUALITY
+    // ==========================================
+
+    const qualityFormData = new FormData();
+
+    qualityFormData.append(
+      "image",
+      image
+    );
+
+    const qualityResponse = await fetch(
       "http://localhost:5001/api/image-quality",
       {
         method: "POST",
-        body: formData
+        body: qualityFormData
       }
     );
 
-    if (!response.ok) {
-      throw new Error("Image quality request failed");
+    if (!qualityResponse.ok) {
+      throw new Error(
+        "Image quality request failed"
+      );
     }
 
-    const result = await response.json();
+    const imageQuality =
+      await qualityResponse.json();
 
-    console.log("IMAGE QUALITY RESULT:", result);
+    console.log(
+      "IMAGE QUALITY:",
+      imageQuality
+    );
 
+
+    // Save image quality result
     sessionStorage.setItem(
       "imageQualityResult",
-      JSON.stringify(result)
+      JSON.stringify(imageQuality)
     );
 
-    navigate("/inspector/analysis");
+
+    // ==========================================
+    // STEP 2 — CHECK IMAGE QUALITY
+    // ==========================================
+
+    const resolutionPassed =
+      imageQuality.checks?.resolution;
+
+    const brightnessPassed =
+      imageQuality.checks?.brightness;
+
+
+    if (
+      !resolutionPassed ||
+      !brightnessPassed
+    ) {
+
+      alert(
+        "Image quality is insufficient. Please capture or upload a clearer image."
+      );
+
+      return;
+    }
+
+
+    // ==========================================
+    // STEP 3 — OCR + SHARPNESS
+    // ==========================================
+
+    const ocrFormData = new FormData();
+
+    ocrFormData.append(
+      "image",
+      image
+    );
+
+    const ocrResponse = await fetch(
+      "http://localhost:5001/api/ocr",
+      {
+        method: "POST",
+        body: ocrFormData
+      }
+    );
+
+
+    if (!ocrResponse.ok) {
+      throw new Error(
+        "OCR request failed"
+      );
+    }
+
+
+    const ocrResult =
+      await ocrResponse.json();
+
+
+    console.log(
+      "OCR + REGION QUALITY:",
+      ocrResult
+    );
+
+
+    // ==========================================
+    // STEP 4 — SAVE OCR RESULT
+    // ==========================================
+
+    sessionStorage.setItem(
+      "ocrResult",
+      JSON.stringify(ocrResult)
+    );
+
+
+    // ==========================================
+    // STEP 5 — GO TO ANALYSIS
+    // ==========================================
+
+    navigate(
+      "/inspector/analysis"
+    );
+
 
   } catch (error) {
-    console.error("Image quality error:", error);
+
+    console.error(
+      "Inspection analysis error:",
+      error
+    );
 
     alert(
-      "Unable to connect to image quality backend. Please check that the backend is running."
+      "Unable to analyze the product. Please check that the backend is running."
     );
+
   }
 };
 
