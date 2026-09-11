@@ -1,0 +1,477 @@
+{
+  "product_folder": "product-4",
+  "images_processed": 3,
+  "images": [
+    {
+      "file": "pic_1.jpg",
+      "ocr": [
+        {
+          "text": "250 ml + 150 ml FREE*",
+          "confidence": 0.968,
+          "box": [
+            866,
+            1573,
+            1505,
+            1717
+          ],
+          "sharpness": 426.87,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "400ml@",
+          "confidence": 1.0,
+          "box": [
+            1590,
+            1602,
+            1916,
+            1731
+          ],
+          "sharpness": 649.48,
+          "quality": "GOOD"
+        },
+        {
+          "text": "20/",
+          "confidence": 0.995,
+          "box": [
+            1896,
+            1603,
+            2073,
+            1745
+          ],
+          "sharpness": 206.11,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Mauntain",
+          "confidence": 0.781,
+          "box": [
+            894,
+            1986,
+            1022,
+            2061
+          ],
+          "sharpness": 331.31,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "DeW",
+          "confidence": 0.803,
+          "box": [
+            885,
+            1993,
+            1048,
+            2116
+          ],
+          "sharpness": 272.66,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "CARBONATED",
+          "confidence": 1.0,
+          "box": [
+            1796,
+            2388,
+            2028,
+            2493
+          ],
+          "sharpness": 568.98,
+          "quality": "GOOD"
+        },
+        {
+          "text": "WATER",
+          "confidence": 1.0,
+          "box": [
+            1851,
+            2453,
+            1986,
+            2542
+          ],
+          "sharpness": 506.17,
+          "quality": "GOOD"
+        }
+      ]
+    },
+    {
+      "file": "pic_2.jpg",
+      "ocr": [
+        {
+          "text": "GSTEREDTRADEMARK OF PEPSICO, INC. LEHAR MOUNTAIN DEW",
+          "confidence": 0.901,
+          "box": [
+            622,
+            1427,
+            1588,
+            1539
+          ],
+          "sharpness": 394.09,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "SUGAR, ACIDITY REGULATORS (330, 331),FLAVOUR (NATURAL FLAVOURING SUBSTANCES), SWEETENERS",
+          "confidence": 0.957,
+          "box": [
+            735,
+            1486,
+            2318,
+            1634
+          ],
+          "sharpness": 529.34,
+          "quality": "GOOD"
+        },
+        {
+          "text": "ONTAINS CAFFEINE",
+          "confidence": 0.992,
+          "box": [
+            743,
+            1542,
+            1374,
+            1727
+          ],
+          "sharpness": 698.97,
+          "quality": "GOOD"
+        },
+        {
+          "text": "THIS CARBONATED WATER CONTAINS A",
+          "confidence": 0.969,
+          "box": [
+            705,
+            1665,
+            1849,
+            1918
+          ],
+          "sharpness": 690.69,
+          "quality": "GOOD"
+        },
+        {
+          "text": "00",
+          "confidence": 0.6,
+          "box": [
+            683,
+            1748,
+            707,
+            1781
+          ],
+          "sharpness": 119.53,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "5",
+          "confidence": 0.93,
+          "box": [
+            684,
+            1802,
+            708,
+            1836
+          ],
+          "sharpness": 96.52,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "NUTRITIONAL INFORMATION^",
+          "confidence": 0.959,
+          "box": [
+            709,
+            1810,
+            1416,
+            1973
+          ],
+          "sharpness": 628.5,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Serve siz: 200 m; 2 servings i intis pack",
+          "confidence": 0.903,
+          "box": [
+            698,
+            1869,
+            1530,
+            2066
+          ],
+          "sharpness": 627.43,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Approximate Values",
+          "confidence": 0.943,
+          "box": [
+            728,
+            2043,
+            904,
+            2126
+          ],
+          "sharpness": 357.29,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "SENECKFO OR FD.,USE BBBY DATE,",
+          "confidence": 0.823,
+          "box": [
+            674,
+            2075,
+            1713,
+            2354
+          ],
+          "sharpness": 542.1,
+          "quality": "GOOD"
+        },
+        {
+          "text": "*MRP  (INCL. OF ALLE",
+          "confidence": 0.895,
+          "box": [
+            1677,
+            2168,
+            2256,
+            2325
+          ],
+          "sharpness": 347.8,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "MFD. BY: VARUN BEVERAGES LIMITED",
+          "confidence": 0.984,
+          "box": [
+            865,
+            2227,
+            1480,
+            2364
+          ],
+          "sharpness": 803.11,
+          "quality": "GOOD"
+        },
+        {
+          "text": "QR CODE",
+          "confidence": 0.951,
+          "box": [
+            722,
+            2444,
+            829,
+            2521
+          ],
+          "sharpness": 145.28,
+          "quality": "QUESTIONABLE"
+        }
+      ]
+    },
+    {
+      "file": "pic_3.jpg",
+      "ocr": [
+        {
+          "text": "SWEETEERS(955,960a),CAFFEINE(13mg/100g),PRESERVATIVE(211),COLOUR(102).",
+          "confidence": 0.945,
+          "box": [
+            1005,
+            1641,
+            1937,
+            1721
+          ],
+          "sharpness": 616.58,
+          "quality": "GOOD"
+        },
+        {
+          "text": "HALORICSWEETENERSI",
+          "confidence": 0.952,
+          "box": [
+            994,
+            1676,
+            1542,
+            1810
+          ],
+          "sharpness": 901.78,
+          "quality": "GOOD"
+        },
+        {
+          "text": "RECYCLABLE",
+          "confidence": 1.0,
+          "box": [
+            1933,
+            1745,
+            2064,
+            1795
+          ],
+          "sharpness": 585.19,
+          "quality": "GOOD"
+        },
+        {
+          "text": "TUEOFSUCRLOSENDSTEVIOLGLYSIDE",
+          "confidence": 0.558,
+          "box": [
+            999,
+            1761,
+            2074,
+            1944
+          ],
+          "sharpness": 691.3,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "MKT. BY: PEPSICO INDIA HOLDINGS PVT. LTD.",
+          "confidence": 0.967,
+          "box": [
+            1533,
+            1953,
+            1991,
+            2007
+          ],
+          "sharpness": 879.6,
+          "quality": "GOOD"
+        },
+        {
+          "text": " Sugars 6.8 g; Total Fat 0 g; Sodium 8 mg.",
+          "confidence": 0.971,
+          "box": [
+            997,
+            1963,
+            1392,
+            2051
+          ],
+          "sharpness": 392.69,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "jsal",
+          "confidence": 0.693,
+          "box": [
+            1677,
+            1992,
+            1854,
+            2086
+          ],
+          "sharpness": 1120.05,
+          "quality": "GOOD"
+        },
+        {
+          "text": "·E.",
+          "confidence": 0.359,
+          "box": [
+            966,
+            2057,
+            1401,
+            2207
+          ],
+          "sharpness": 415.56,
+          "quality": "POOR"
+        },
+        {
+          "text": "C N0435",
+          "confidence": 0.683,
+          "box": [
+            1628,
+            2075,
+            1900,
+            2123
+          ],
+          "sharpness": 1077.15,
+          "quality": "GOOD"
+        },
+        {
+          "text": "EOR  A",
+          "confidence": 0.587,
+          "box": [
+            1408,
+            2100,
+            2054,
+            2166
+          ],
+          "sharpness": 838.69,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "WSESEEFIRST",
+          "confidence": 0.811,
+          "box": [
+            977,
+            2163,
+            1101,
+            2225
+          ],
+          "sharpness": 374.46,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "E I  AE",
+          "confidence": 0.706,
+          "box": [
+            1164,
+            2182,
+            1488,
+            2256
+          ],
+          "sharpness": 915.66,
+          "quality": "GOOD"
+        },
+        {
+          "text": "NET QUANTITY",
+          "confidence": 0.998,
+          "box": [
+            1650,
+            2195,
+            2004,
+            2292
+          ],
+          "sharpness": 447.89,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "AWAY FROM DIRECT SUNLIGHT.",
+          "confidence": 0.993,
+          "box": [
+            1164,
+            2214,
+            1493,
+            2290
+          ],
+          "sharpness": 1115.62,
+          "quality": "GOOD"
+        },
+        {
+          "text": "10.2.LFQUTABENCLAVE-1",
+          "confidence": 0.798,
+          "box": [
+            979,
+            2230,
+            1338,
+            2381
+          ],
+          "sharpness": 709.64,
+          "quality": "GOOD"
+        },
+        {
+          "text": "CK@PEPSICO.COMc18000224020",
+          "confidence": 0.875,
+          "box": [
+            1023,
+            2302,
+            1481,
+            2469
+          ],
+          "sharpness": 599.59,
+          "quality": "GOOD"
+        },
+        {
+          "text": "400ml",
+          "confidence": 1.0,
+          "box": [
+            1691,
+            2324,
+            1913,
+            2416
+          ],
+          "sharpness": 358.85,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "(250ml+150mlFREE)",
+          "confidence": 1.0,
+          "box": [
+            1570,
+            2387,
+            2045,
+            2505
+          ],
+          "sharpness": 380.89,
+          "quality": "QUESTIONABLE"
+        }
+      ]
+    }
+  ]
+}
