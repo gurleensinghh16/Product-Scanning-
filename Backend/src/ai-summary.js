@@ -111,7 +111,7 @@ Generate the report using the required JSON structure.
 
   const response = await ai.models.generateContent({
 
-    model: "gemini-3.6-flash",
+    model: "gemini-3.8-flash",
 
     contents: prompt,
 
