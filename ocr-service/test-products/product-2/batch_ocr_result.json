@@ -1,0 +1,1113 @@
+{
+  "product_folder": "product-2",
+  "images_processed": 3,
+  "images": [
+    {
+      "file": "pic_1.jpg",
+      "ocr": [
+        {
+          "text": "INGREDIENTS: CARBONATED WATER, ACIDITY",
+          "confidence": 0.991,
+          "box": [
+            763,
+            963,
+            1404,
+            1049
+          ],
+          "sharpness": 106.85,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "REGULATORS(338,331()),S",
+          "confidence": 0.918,
+          "box": [
+            764,
+            1029,
+            1148,
+            1095
+          ],
+          "sharpness": 111.71,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "SWEETENERS (951,",
+          "confidence": 0.998,
+          "box": [
+            1115,
+            1028,
+            1415,
+            1110
+          ],
+          "sharpness": 147.32,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "I A S",
+          "confidence": 0.456,
+          "box": [
+            1392,
+            1041,
+            1593,
+            2518
+          ],
+          "sharpness": 337.94,
+          "quality": "POOR"
+        },
+        {
+          "text": "SEATEFE(g)]",
+          "confidence": 0.539,
+          "box": [
+            755,
+            1071,
+            1489,
+            1186
+          ],
+          "sharpness": 188.75,
+          "quality": "POOR"
+        },
+        {
+          "text": "COLOUR(150OD), FLAVOURS(NATURAL FLAVOURING",
+          "confidence": 0.923,
+          "box": [
+            760,
+            1138,
+            1473,
+            1231
+          ],
+          "sharpness": 177.43,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "SUBSTANCES).",
+          "confidence": 0.997,
+          "box": [
+            763,
+            1204,
+            937,
+            1264
+          ],
+          "sharpness": 99.61,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "NUTRITION INFORMATION(APPROXIMATE",
+          "confidence": 0.992,
+          "box": [
+            802,
+            1263,
+            1421,
+            1348
+          ],
+          "sharpness": 227.66,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "O RE  I  NT",
+          "confidence": 0.452,
+          "box": [
+            1474,
+            1264,
+            1642,
+            2504
+          ],
+          "sharpness": 257.8,
+          "quality": "POOR"
+        },
+        {
+          "text": "VALUES)SERVING=200ml1.5SERVINGS",
+          "confidence": 0.965,
+          "box": [
+            798,
+            1310,
+            1421,
+            1393
+          ],
+          "sharpness": 255.56,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "IN THIS PACK",
+          "confidence": 0.984,
+          "box": [
+            986,
+            1363,
+            1196,
+            1423
+          ],
+          "sharpness": 191.9,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "%RDA*",
+          "confidence": 1.0,
+          "box": [
+            1279,
+            1432,
+            1407,
+            1496
+          ],
+          "sharpness": 520.31,
+          "quality": "GOOD"
+        },
+        {
+          "text": "PERm",
+          "confidence": 0.692,
+          "box": [
+            1029,
+            1470,
+            1223,
+            1542
+          ],
+          "sharpness": 132.0,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "ERRE",
+          "confidence": 0.701,
+          "box": [
+            1248,
+            1485,
+            1439,
+            1552
+          ],
+          "sharpness": 457.15,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "ENEERGY",
+          "confidence": 0.876,
+          "box": [
+            763,
+            1537,
+            880,
+            1602
+          ],
+          "sharpness": 105.99,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Okcal",
+          "confidence": 0.968,
+          "box": [
+            1037,
+            1540,
+            1155,
+            1611
+          ],
+          "sharpness": 94.69,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "%0",
+          "confidence": 1.0,
+          "box": [
+            1303,
+            1559,
+            1367,
+            1619
+          ],
+          "sharpness": 551.41,
+          "quality": "GOOD"
+        },
+        {
+          "text": "RRAT",
+          "confidence": 0.857,
+          "box": [
+            762,
+            1593,
+            998,
+            1667
+          ],
+          "sharpness": 134.11,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "60",
+          "confidence": 0.986,
+          "box": [
+            1039,
+            1604,
+            1105,
+            1673
+          ],
+          "sharpness": 84.1,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "OTL GARS",
+          "confidence": 0.609,
+          "box": [
+            766,
+            1649,
+            980,
+            1722
+          ],
+          "sharpness": 142.15,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "60",
+          "confidence": 0.996,
+          "box": [
+            1031,
+            1658,
+            1106,
+            1734
+          ],
+          "sharpness": 81.47,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": " ARS",
+          "confidence": 0.701,
+          "box": [
+            773,
+            1706,
+            1010,
+            1780
+          ],
+          "sharpness": 151.5,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "60",
+          "confidence": 0.976,
+          "box": [
+            1033,
+            1716,
+            1101,
+            1790
+          ],
+          "sharpness": 76.02,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "%0",
+          "confidence": 1.0,
+          "box": [
+            1293,
+            1730,
+            1357,
+            1791
+          ],
+          "sharpness": 452.55,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "TOTALFAT",
+          "confidence": 1.0,
+          "box": [
+            757,
+            1753,
+            905,
+            1824
+          ],
+          "sharpness": 130.77,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "0g",
+          "confidence": 0.931,
+          "box": [
+            1025,
+            1762,
+            1105,
+            1844
+          ],
+          "sharpness": 132.95,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "0%",
+          "confidence": 1.0,
+          "box": [
+            1291,
+            1782,
+            1356,
+            1842
+          ],
+          "sharpness": 462.19,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "PROTEIN",
+          "confidence": 1.0,
+          "box": [
+            754,
+            1806,
+            883,
+            1877
+          ],
+          "sharpness": 171.94,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "0g",
+          "confidence": 0.998,
+          "box": [
+            1027,
+            1822,
+            1096,
+            1893
+          ],
+          "sharpness": 195.76,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "SODIUM",
+          "confidence": 1.0,
+          "box": [
+            753,
+            1860,
+            875,
+            1931
+          ],
+          "sharpness": 160.37,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "8.3mg",
+          "confidence": 0.996,
+          "box": [
+            1019,
+            1875,
+            1157,
+            1957
+          ],
+          "sharpness": 133.13,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "0.8%",
+          "confidence": 1.0,
+          "box": [
+            1269,
+            1895,
+            1362,
+            1953
+          ],
+          "sharpness": 429.28,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "*BASED ON 2000 kcal DIET",
+          "confidence": 0.99,
+          "box": [
+            979,
+            1949,
+            1414,
+            2025
+          ],
+          "sharpness": 324.28,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "CONTAINNON-CALORICSWEETENER",
+          "confidence": 0.964,
+          "box": [
+            747,
+            1976,
+            1387,
+            2130
+          ],
+          "sharpness": 258.0,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "\"CONTAINS CAFFEINE\"",
+          "confidence": 0.957,
+          "box": [
+            749,
+            2060,
+            1106,
+            2205
+          ],
+          "sharpness": 169.4,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "329016",
+          "confidence": 0.629,
+          "box": [
+            1149,
+            2111,
+            1245,
+            2606
+          ],
+          "sharpness": 45.95,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "MADE IN INDIA",
+          "confidence": 0.987,
+          "box": [
+            1312,
+            2116,
+            1412,
+            2515
+          ],
+          "sharpness": 365.78,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "OAT",
+          "confidence": 0.713,
+          "box": [
+            1580,
+            1041,
+            1721,
+            2161
+          ],
+          "sharpness": 95.2,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "",
+          "confidence": 0.0,
+          "box": [
+            1624,
+            1044,
+            1767,
+            2153
+          ],
+          "sharpness": 60.12,
+          "quality": "POOR"
+        },
+        {
+          "text": "FIRSTTHREECHARACTERS OF",
+          "confidence": 0.986,
+          "box": [
+            735,
+            2168,
+            779,
+            2597
+          ],
+          "sharpness": 61.74,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "址No.1001202200",
+          "confidence": 0.899,
+          "box": [
+            1080,
+            2200,
+            1175,
+            2610
+          ],
+          "sharpness": 26.61,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "TUREN'S ADDRESS.",
+          "confidence": 0.947,
+          "box": [
+            766,
+            2221,
+            816,
+            2505
+          ],
+          "sharpness": 39.63,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "fuc. No.10019063001369",
+          "confidence": 0.936,
+          "box": [
+            903,
+            2275,
+            977,
+            2727
+          ],
+          "sharpness": 60.42,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "L10012064000074",
+          "confidence": 0.964,
+          "box": [
+            967,
+            2274,
+            1038,
+            2673
+          ],
+          "sharpness": 66.26,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "9000437",
+          "confidence": 0.967,
+          "box": [
+            1042,
+            2271,
+            1097,
+            2421
+          ],
+          "sharpness": 43.22,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "T Lc. No. 12723999000246",
+          "confidence": 0.872,
+          "box": [
+            837,
+            2326,
+            920,
+            2869
+          ],
+          "sharpness": 34.29,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "012051000360",
+          "confidence": 0.999,
+          "box": [
+            806,
+            2380,
+            854,
+            2600
+          ],
+          "sharpness": 23.31,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "dietcokea",
+          "confidence": 0.8,
+          "box": [
+            1511,
+            2762,
+            1672,
+            2871
+          ],
+          "sharpness": 37.84,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "RECYCLEME",
+          "confidence": 1.0,
+          "box": [
+            1463,
+            2880,
+            1580,
+            3510
+          ],
+          "sharpness": 27.59,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "ECCL",
+          "confidence": 0.77,
+          "box": [
+            1276,
+            3017,
+            1423,
+            3090
+          ],
+          "sharpness": 62.05,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "best served chilled",
+          "confidence": 0.998,
+          "box": [
+            1365,
+            3079,
+            1446,
+            3548
+          ],
+          "sharpness": 63.3,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "D3HC13A",
+          "confidence": 0.886,
+          "box": [
+            1290,
+            3251,
+            1344,
+            3456
+          ],
+          "sharpness": 14.6,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "300ml",
+          "confidence": 0.965,
+          "box": [
+            753,
+            3435,
+            1043,
+            3588
+          ],
+          "sharpness": 13.86,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "NY",
+          "confidence": 0.876,
+          "box": [
+            1420,
+            2910,
+            1506,
+            3522
+          ],
+          "sharpness": 47.07,
+          "quality": "QUESTIONABLE"
+        }
+      ]
+    },
+    {
+      "file": "pic_2.jpg",
+      "ocr": [
+        {
+          "text": "Diet",
+          "confidence": 0.91,
+          "box": [
+            1208,
+            733,
+            1352,
+            803
+          ],
+          "sharpness": 49.87,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "CONTACT CONSUMER RESPONSE COORDINATOR AT:",
+          "confidence": 0.989,
+          "box": [
+            999,
+            939,
+            1133,
+            2124
+          ],
+          "sharpness": 80.18,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "1800-208-2653indiahelpline@coca-cola.com",
+          "confidence": 1.0,
+          "box": [
+            1073,
+            931,
+            1223,
+            2130
+          ],
+          "sharpness": 74.12,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "NOT RECOMMENDED FOR PHENYLKETONURICS;FOR CHIDRN; PREGNANT AD LACTATING MOTHE..",
+          "confidence": 0.923,
+          "box": [
+            886,
+            943,
+            1037,
+            2457
+          ],
+          "sharpness": 171.32,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "UTR AIOTYY",
+          "confidence": 0.656,
+          "box": [
+            618,
+            940,
+            775,
+            1016
+          ],
+          "sharpness": 30.85,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "THS CARBONATED WATER CONTAINS AN ADMIXTURE OF ASPARAME AND ACESULFAMEPOTATASSIUM.",
+          "confidence": 0.915,
+          "box": [
+            800,
+            969,
+            948,
+            2442
+          ],
+          "sharpness": 140.8,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "SWETENERS 1951,",
+          "confidence": 0.861,
+          "box": [
+            615,
+            995,
+            785,
+            1073
+          ],
+          "sharpness": 31.97,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "(OPENE (10 mg/100 g)",
+          "confidence": 0.796,
+          "box": [
+            609,
+            1044,
+            840,
+            1126
+          ],
+          "sharpness": 39.4,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "NITURAL FLAVOURING",
+          "confidence": 0.882,
+          "box": [
+            609,
+            1106,
+            830,
+            1176
+          ],
+          "sharpness": 39.47,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "/ER",
+          "confidence": 0.663,
+          "box": [
+            1160,
+            1134,
+            1296,
+            2132
+          ],
+          "sharpness": 165.64,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "F  ",
+          "confidence": 0.701,
+          "box": [
+            1240,
+            1133,
+            1377,
+            2130
+          ],
+          "sharpness": 241.37,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "PROXIMATE",
+          "confidence": 0.999,
+          "box": [
+            677,
+            1230,
+            792,
+            1285
+          ],
+          "sharpness": 75.14,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "LSERVINGS",
+          "confidence": 0.988,
+          "box": [
+            658,
+            1273,
+            795,
+            1326
+          ],
+          "sharpness": 74.21,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "%OA%",
+          "confidence": 0.652,
+          "box": [
+            697,
+            1368,
+            785,
+            1426
+          ],
+          "sharpness": 65.77,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "PR RVE",
+          "confidence": 0.751,
+          "box": [
+            679,
+            1420,
+            814,
+            1479
+          ],
+          "sharpness": 108.96,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "X0",
+          "confidence": 0.918,
+          "box": [
+            718,
+            1495,
+            754,
+            1539
+          ],
+          "sharpness": 87.54,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "·00",
+          "confidence": 0.685,
+          "box": [
+            706,
+            1648,
+            756,
+            1810
+          ],
+          "sharpness": 41.14,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "%8'0",
+          "confidence": 0.869,
+          "box": [
+            697,
+            1804,
+            762,
+            1865
+          ],
+          "sharpness": 42.06,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "2000 kcal DIET",
+          "confidence": 0.865,
+          "box": [
+            637,
+            1862,
+            809,
+            1941
+          ],
+          "sharpness": 92.23,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "NEETENER",
+          "confidence": 0.927,
+          "box": [
+            651,
+            1925,
+            783,
+            2024
+          ],
+          "sharpness": 95.94,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "AA",
+          "confidence": 0.659,
+          "box": [
+            614,
+            2008,
+            650,
+            2649
+          ],
+          "sharpness": 47.12,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "MAD IDIA",
+          "confidence": 0.777,
+          "box": [
+            737,
+            2038,
+            807,
+            2416
+          ],
+          "sharpness": 42.58,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "1",
+          "confidence": 0.949,
+          "box": [
+            1104,
+            2531,
+            1195,
+            2741
+          ],
+          "sharpness": 156.48,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "dietcoke.com",
+          "confidence": 0.999,
+          "box": [
+            971,
+            2789,
+            1319,
+            2868
+          ],
+          "sharpness": 40.09,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "TRADEMARK & BRAND OWNER: THE COCA-COLA COMPANY. ADDRESS SAME AS MFG BY ADDRESS",
+          "confidence": 0.991,
+          "box": [
+            1385,
+            1437,
+            1510,
+            2843
+          ],
+          "sharpness": 213.08,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "EEE",
+          "confidence": 0.699,
+          "box": [
+            921,
+            2866,
+            1057,
+            3531
+          ],
+          "sharpness": 9.83,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "FOR DATE OF MANUFACTURE, EXPIRY, BATCH NO., USP & MRP (INCL. OF ALL TAXES): SEE BOTTOM OF CAN.",
+          "confidence": 0.988,
+          "box": [
+            1305,
+            899,
+            1493,
+            2866
+          ],
+          "sharpness": 218.72,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "LYCLE",
+          "confidence": 0.87,
+          "box": [
+            721,
+            2914,
+            865,
+            3012
+          ],
+          "sharpness": 16.54,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "8901112571",
+          "confidence": 0.84,
+          "box": [
+            1313,
+            2917,
+            1407,
+            3508
+          ],
+          "sharpness": 170.38,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "B9HCI3A",
+          "confidence": 0.629,
+          "box": [
+            748,
+            3156,
+            787,
+            3336
+          ],
+          "sharpness": 15.63,
+          "quality": "QUESTIONABLE"
+        }
+      ]
+    },
+    {
+      "file": "pic_3.jpg",
+      "ocr": [
+        {
+          "text": "88888",
+          "confidence": 0.947,
+          "box": [
+            664,
+            391,
+            1451,
+            536
+          ],
+          "sharpness": 20.75,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "0000000",
+          "confidence": 0.966,
+          "box": [
+            179,
+            639,
+            1342,
+            794
+          ],
+          "sharpness": 27.14,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "JOOOOOOF",
+          "confidence": 0.674,
+          "box": [
+            3,
+            753,
+            1180,
+            952
+          ],
+          "sharpness": 26.1,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "000009",
+          "confidence": 0.586,
+          "box": [
+            18,
+            897,
+            1062,
+            1099
+          ],
+          "sharpness": 28.36,
+          "quality": "POOR"
+        },
+        {
+          "text": "NOSUGAR",
+          "confidence": 1.0,
+          "box": [
+            1056,
+            2507,
+            1556,
+            2603
+          ],
+          "sharpness": 105.8,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "NO CALORIES",
+          "confidence": 0.993,
+          "box": [
+            991,
+            2568,
+            1609,
+            2684
+          ],
+          "sharpness": 94.16,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "CRISP TASTE",
+          "confidence": 0.998,
+          "box": [
+            1030,
+            2676,
+            1571,
+            2779
+          ],
+          "sharpness": 72.44,
+          "quality": "QUESTIONABLE"
+        }
+      ]
+    }
+  ]
+}

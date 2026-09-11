@@ -1,0 +1,1490 @@
+{
+  "product_folder": "product-3",
+  "images_processed": 4,
+  "images": [
+    {
+      "file": "pic_1.jpg",
+      "ocr": [
+        {
+          "text": "Badshah",
+          "confidence": 1.0,
+          "box": [
+            125,
+            252,
+            594,
+            361
+          ],
+          "sharpness": 138.84,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "TM",
+          "confidence": 1.0,
+          "box": [
+            565,
+            265,
+            597,
+            289
+          ],
+          "sharpness": 650.83,
+          "quality": "GOOD"
+        },
+        {
+          "text": "SWAD SUGANDH KA RAJA",
+          "confidence": 0.934,
+          "box": [
+            177,
+            361,
+            547,
+            395
+          ],
+          "sharpness": 468.56,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Kitchen King Masala",
+          "confidence": 1.0,
+          "box": [
+            82,
+            424,
+            635,
+            509
+          ],
+          "sharpness": 363.08,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "",
+          "confidence": 0.0,
+          "box": [
+            192,
+            491,
+            408,
+            547
+          ],
+          "sharpness": 633.23,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "RTMT",
+          "confidence": 0.784,
+          "box": [
+            399,
+            501,
+            530,
+            546
+          ],
+          "sharpness": 852.96,
+          "quality": "GOOD"
+        },
+        {
+          "text": "TRUSTED",
+          "confidence": 0.995,
+          "box": [
+            140,
+            861,
+            254,
+            938
+          ],
+          "sharpness": 867.21,
+          "quality": "GOOD"
+        },
+        {
+          "text": "SINCE 1958",
+          "confidence": 0.989,
+          "box": [
+            139,
+            931,
+            261,
+            997
+          ],
+          "sharpness": 843.2,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Serving suggestion",
+          "confidence": 0.999,
+          "box": [
+            481,
+            990,
+            633,
+            1018
+          ],
+          "sharpness": 3057.24,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Mixed Masala Powder",
+          "confidence": 0.977,
+          "box": [
+            439,
+            1014,
+            634,
+            1045
+          ],
+          "sharpness": 2666.61,
+          "quality": "GOOD"
+        }
+      ]
+    },
+    {
+      "file": "pic_2.jpg",
+      "ocr": [
+        {
+          "text": "TM",
+          "confidence": 0.987,
+          "box": [
+            1247,
+            920,
+            1305,
+            967
+          ],
+          "sharpness": 120.23,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "2112212",
+          "confidence": 0.933,
+          "box": [
+            768,
+            1006,
+            1257,
+            1134
+          ],
+          "sharpness": 45.22,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "",
+          "confidence": 0.0,
+          "box": [
+            831,
+            1124,
+            1199,
+            1179
+          ],
+          "sharpness": 111.26,
+          "quality": "POOR"
+        },
+        {
+          "text": "上2c",
+          "confidence": 0.724,
+          "box": [
+            699,
+            1407,
+            917,
+            1519
+          ],
+          "sharpness": 114.45,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "",
+          "confidence": 0.0,
+          "box": [
+            905,
+            1414,
+            1063,
+            1519
+          ],
+          "sharpness": 174.26,
+          "quality": "POOR"
+        },
+        {
+          "text": "",
+          "confidence": 0.0,
+          "box": [
+            1059,
+            1437,
+            1275,
+            1520
+          ],
+          "sharpness": 246.17,
+          "quality": "POOR"
+        },
+        {
+          "text": "b1kht 1c 1k]",
+          "confidence": 0.669,
+          "box": [
+            778,
+            1522,
+            1207,
+            1613
+          ],
+          "sharpness": 223.68,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "dO",
+          "confidence": 0.492,
+          "box": [
+            700,
+            1635,
+            1041,
+            1706
+          ],
+          "sharpness": 264.96,
+          "quality": "POOR"
+        },
+        {
+          "text": "53",
+          "confidence": 0.392,
+          "box": [
+            1031,
+            1639,
+            1277,
+            1708
+          ],
+          "sharpness": 334.23,
+          "quality": "POOR"
+        },
+        {
+          "text": "5  YMS",
+          "confidence": 0.435,
+          "box": [
+            739,
+            1741,
+            1244,
+            1826
+          ],
+          "sharpness": 338.58,
+          "quality": "POOR"
+        },
+        {
+          "text": "9  6 562上",
+          "confidence": 0.564,
+          "box": [
+            681,
+            1846,
+            1304,
+            1924
+          ],
+          "sharpness": 360.6,
+          "quality": "POOR"
+        },
+        {
+          "text": "",
+          "confidence": 0.0,
+          "box": [
+            766,
+            1947,
+            1217,
+            2065
+          ],
+          "sharpness": 203.83,
+          "quality": "POOR"
+        },
+        {
+          "text": "Abr",
+          "confidence": 0.628,
+          "box": [
+            691,
+            2506,
+            1018,
+            2608
+          ],
+          "sharpness": 199.84,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "nnrise",
+          "confidence": 0.596,
+          "box": [
+            1023,
+            2536,
+            1280,
+            2601
+          ],
+          "sharpness": 264.73,
+          "quality": "POOR"
+        },
+        {
+          "text": "Follo Us:",
+          "confidence": 0.775,
+          "box": [
+            832,
+            2700,
+            1121,
+            2776
+          ],
+          "sharpness": 191.46,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "bacial",
+          "confidence": 0.761,
+          "box": [
+            700,
+            2769,
+            1270,
+            2856
+          ],
+          "sharpness": 186.14,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "0",
+          "confidence": 0.76,
+          "box": [
+            913,
+            2850,
+            1155,
+            2964
+          ],
+          "sharpness": 66.85,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "R  DI",
+          "confidence": 0.738,
+          "box": [
+            710,
+            3101,
+            1258,
+            3195
+          ],
+          "sharpness": 92.18,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "8901774002172",
+          "confidence": 1.0,
+          "box": [
+            664,
+            3522,
+            1263,
+            3613
+          ],
+          "sharpness": 250.45,
+          "quality": "QUESTIONABLE"
+        }
+      ]
+    },
+    {
+      "file": "pic_3.jpg",
+      "ocr": [
+        {
+          "text": "0001",
+          "confidence": 0.864,
+          "box": [
+            24,
+            1140,
+            716,
+            1378
+          ],
+          "sharpness": 17.0,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Badshah",
+          "confidence": 0.851,
+          "box": [
+            946,
+            1318,
+            1314,
+            1405
+          ],
+          "sharpness": 35.58,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "SWAAA",
+          "confidence": 0.811,
+          "box": [
+            988,
+            1404,
+            1275,
+            1432
+          ],
+          "sharpness": 63.88,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "X DER",
+          "confidence": 0.688,
+          "box": [
+            846,
+            1586,
+            1344,
+            1660
+          ],
+          "sharpness": 122.44,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "100g",
+          "confidence": 0.913,
+          "box": [
+            1132,
+            1683,
+            1252,
+            1774
+          ],
+          "sharpness": 151.38,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "NET OTY:",
+          "confidence": 0.826,
+          "box": [
+            846,
+            1687,
+            1063,
+            1776
+          ],
+          "sharpness": 116.73,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "REGISTERED OFFICE AND",
+          "confidence": 0.986,
+          "box": [
+            849,
+            1791,
+            1356,
+            1869
+          ],
+          "sharpness": 257.74,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "CONSUMER CELL:",
+          "confidence": 0.985,
+          "box": [
+            860,
+            1859,
+            1217,
+            1933
+          ],
+          "sharpness": 299.4,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "BADSHAH MASALA",
+          "confidence": 0.983,
+          "box": [
+            860,
+            1924,
+            1237,
+            1999
+          ],
+          "sharpness": 398.84,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "PRIVATE LIMITED, OFFICE",
+          "confidence": 0.991,
+          "box": [
+            863,
+            1989,
+            1359,
+            2066
+          ],
+          "sharpness": 357.91,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "NO.504,FIFTH FLOOR,",
+          "confidence": 0.97,
+          "box": [
+            862,
+            2056,
+            1309,
+            2133
+          ],
+          "sharpness": 376.28,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "NEELKANTH CORPORÁTE",
+          "confidence": 0.965,
+          "box": [
+            866,
+            2121,
+            1367,
+            2199
+          ],
+          "sharpness": 375.91,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "PARK, KIROL ROAD,",
+          "confidence": 0.997,
+          "box": [
+            867,
+            2188,
+            1248,
+            2268
+          ],
+          "sharpness": 368.88,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "VIDYAVIHAR (W), MUMBAI,",
+          "confidence": 0.963,
+          "box": [
+            868,
+            2251,
+            1369,
+            2334
+          ],
+          "sharpness": 347.04,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "MAHARASHTRA-400 086.",
+          "confidence": 0.977,
+          "box": [
+            868,
+            2318,
+            1381,
+            2399
+          ],
+          "sharpness": 304.78,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "E-MAIL:",
+          "confidence": 1.0,
+          "box": [
+            870,
+            2393,
+            1040,
+            2468
+          ],
+          "sharpness": 238.49,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Care@badshahmasala.com",
+          "confidence": 1.0,
+          "box": [
+            871,
+            2453,
+            1341,
+            2535
+          ],
+          "sharpness": 275.62,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "WEBSITE:",
+          "confidence": 1.0,
+          "box": [
+            870,
+            2526,
+            1082,
+            2601
+          ],
+          "sharpness": 243.64,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "w..co",
+          "confidence": 0.803,
+          "box": [
+            871,
+            2586,
+            1346,
+            2668
+          ],
+          "sharpness": 222.63,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "OLFNO",
+          "confidence": 0.61,
+          "box": [
+            873,
+            2656,
+            1206,
+            2733
+          ],
+          "sharpness": 187.97,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "800-101644",
+          "confidence": 0.807,
+          "box": [
+            874,
+            2722,
+            1169,
+            2800
+          ],
+          "sharpness": 200.78,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "CIN NO.;",
+          "confidence": 0.802,
+          "box": [
+            871,
+            2791,
+            1054,
+            2869
+          ],
+          "sharpness": 158.71,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "15423",
+          "confidence": 0.727,
+          "box": [
+            871,
+            2840,
+            1409,
+            2933
+          ],
+          "sharpness": 147.81,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "..BY",
+          "confidence": 0.845,
+          "box": [
+            874,
+            2918,
+            1207,
+            2999
+          ],
+          "sharpness": 123.99,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "BADSHAHMASALA",
+          "confidence": 0.999,
+          "box": [
+            880,
+            2983,
+            1251,
+            3060
+          ],
+          "sharpness": 150.29,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "PRIVATE LIMITED,",
+          "confidence": 0.994,
+          "box": [
+            879,
+            3049,
+            1225,
+            3130
+          ],
+          "sharpness": 124.94,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "PLOT NO.A1/179,A1/180,",
+          "confidence": 0.967,
+          "box": [
+            880,
+            3110,
+            1349,
+            3194
+          ],
+          "sharpness": 117.84,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "199/2,GIDC,UMARGAM,",
+          "confidence": 0.997,
+          "box": [
+            884,
+            3177,
+            1336,
+            3263
+          ],
+          "sharpness": 112.27,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "VALSAD,GUJARAT-396171.",
+          "confidence": 0.997,
+          "box": [
+            883,
+            3236,
+            1426,
+            3334
+          ],
+          "sharpness": 88.37,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "fssat",
+          "confidence": 0.983,
+          "box": [
+            1049,
+            3314,
+            1279,
+            3449
+          ],
+          "sharpness": 37.26,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Lic. No.10020021005699",
+          "confidence": 0.984,
+          "box": [
+            878,
+            3428,
+            1450,
+            3532
+          ],
+          "sharpness": 57.64,
+          "quality": "QUESTIONABLE"
+        }
+      ]
+    },
+    {
+      "file": "pic_4.jpg",
+      "ocr": [
+        {
+          "text": "MIXED MASALA POWDER",
+          "confidence": 0.997,
+          "box": [
+            687,
+            1290,
+            1233,
+            1360
+          ],
+          "sharpness": 139.14,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Store in a cool, dry and hygienic place.",
+          "confidence": 0.998,
+          "box": [
+            685,
+            1357,
+            1503,
+            1444
+          ],
+          "sharpness": 166.84,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "PRACTISE SAFETY HABITS IN THE KITCHEN",
+          "confidence": 0.985,
+          "box": [
+            686,
+            1424,
+            1616,
+            1504
+          ],
+          "sharpness": 226.55,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "METHOD OF PREPARATION",
+          "confidence": 1.0,
+          "box": [
+            696,
+            1497,
+            1124,
+            1554
+          ],
+          "sharpness": 505.05,
+          "quality": "GOOD"
+        },
+        {
+          "text": "",
+          "confidence": 0.0,
+          "box": [
+            1470,
+            1514,
+            1710,
+            1573
+          ],
+          "sharpness": 683.15,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "MUTTER PANEER",
+          "confidence": 0.997,
+          "box": [
+            685,
+            1563,
+            1024,
+            1616
+          ],
+          "sharpness": 251.31,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "2h 22h",
+          "confidence": 0.746,
+          "box": [
+            1456,
+            1578,
+            1651,
+            1639
+          ],
+          "sharpness": 298.17,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "e       d",
+          "confidence": 0.722,
+          "box": [
+            684,
+            1617,
+            1218,
+            1678
+          ],
+          "sharpness": 220.0,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "",
+          "confidence": 0.0,
+          "box": [
+            1454,
+            1634,
+            1934,
+            1695
+          ],
+          "sharpness": 299.31,
+          "quality": "POOR"
+        },
+        {
+          "text": "SSs",
+          "confidence": 0.549,
+          "box": [
+            1276,
+            1645,
+            1340,
+            1691
+          ],
+          "sharpness": 170.0,
+          "quality": "POOR"
+        },
+        {
+          "text": "nd  ns",
+          "confidence": 0.62,
+          "box": [
+            683,
+            1667,
+            1216,
+            1724
+          ],
+          "sharpness": 286.53,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "新 01 ",
+          "confidence": 0.553,
+          "box": [
+            1453,
+            1678,
+            1931,
+            1741
+          ],
+          "sharpness": 377.25,
+          "quality": "POOR"
+        },
+        {
+          "text": "till brown.",
+          "confidence": 1.0,
+          "box": [
+            684,
+            1715,
+            865,
+            1763
+          ],
+          "sharpness": 315.92,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "",
+          "confidence": 0.0,
+          "box": [
+            1450,
+            1723,
+            1904,
+            1785
+          ],
+          "sharpness": 514.11,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Heat 2 tbsp oil again in a pan",
+          "confidence": 0.998,
+          "box": [
+            683,
+            1768,
+            1214,
+            1825
+          ],
+          "sharpness": 426.62,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "2",
+          "confidence": 0.652,
+          "box": [
+            1452,
+            1780,
+            1927,
+            1840
+          ],
+          "sharpness": 517.6,
+          "quality": "GOOD"
+        },
+        {
+          "text": "and add 1/4 tsp cumin seeds.",
+          "confidence": 0.955,
+          "box": [
+            681,
+            1813,
+            1212,
+            1866
+          ],
+          "sharpness": 286.95,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "331/4",
+          "confidence": 0.77,
+          "box": [
+            1450,
+            1827,
+            1925,
+            1883
+          ],
+          "sharpness": 344.97,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Add onion paste and 1 tsp",
+          "confidence": 1.0,
+          "box": [
+            682,
+            1856,
+            1212,
+            1911
+          ],
+          "sharpness": 248.87,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "",
+          "confidence": 0.0,
+          "box": [
+            1450,
+            1871,
+            1924,
+            1928
+          ],
+          "sharpness": 400.12,
+          "quality": "POOR"
+        },
+        {
+          "text": "ginger-garlic paste and sauté",
+          "confidence": 0.989,
+          "box": [
+            681,
+            1901,
+            1213,
+            1951
+          ],
+          "sharpness": 306.43,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "1",
+          "confidence": 0.945,
+          "box": [
+            1452,
+            1912,
+            1923,
+            1977
+          ],
+          "sharpness": 440.79,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "for 1 min. To this, add 150g",
+          "confidence": 0.992,
+          "box": [
+            680,
+            1942,
+            1211,
+            1996
+          ],
+          "sharpness": 247.85,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "可1",
+          "confidence": 0.815,
+          "box": [
+            1448,
+            1956,
+            1920,
+            2018
+          ],
+          "sharpness": 400.35,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "tomato purée and cook for",
+          "confidence": 0.995,
+          "box": [
+            680,
+            1987,
+            1211,
+            2036
+          ],
+          "sharpness": 240.28,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "150",
+          "confidence": 0.705,
+          "box": [
+            1449,
+            2001,
+            1922,
+            2062
+          ],
+          "sharpness": 349.09,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "7-8 mins",
+          "confidence": 0.994,
+          "box": [
+            679,
+            2027,
+            841,
+            2074
+          ],
+          "sharpness": 303.93,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": " 7-8   ",
+          "confidence": 0.931,
+          "box": [
+            1445,
+            2044,
+            1884,
+            2106
+          ],
+          "sharpness": 501.32,
+          "quality": "GOOD"
+        },
+        {
+          "text": "Add 1/4 tsp turmeric powder,",
+          "confidence": 0.997,
+          "box": [
+            679,
+            2109,
+            1208,
+            2162
+          ],
+          "sharpness": 234.1,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "371/",
+          "confidence": 0.737,
+          "box": [
+            1447,
+            2107,
+            1918,
+            2163
+          ],
+          "sharpness": 513.7,
+          "quality": "GOOD"
+        },
+        {
+          "text": "1 tsp chilli powder, 1/½ tbsp",
+          "confidence": 0.964,
+          "box": [
+            678,
+            2158,
+            1210,
+            2212
+          ],
+          "sharpness": 227.81,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "1",
+          "confidence": 0.884,
+          "box": [
+            1446,
+            2151,
+            1915,
+            2205
+          ],
+          "sharpness": 381.38,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "，可1/2",
+          "confidence": 0.772,
+          "box": [
+            1445,
+            2194,
+            1915,
+            2249
+          ],
+          "sharpness": 374.21,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "cashew paste and 3 tsp",
+          "confidence": 0.998,
+          "box": [
+            676,
+            2208,
+            1210,
+            2260
+          ],
+          "sharpness": 230.57,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "",
+          "confidence": 0.0,
+          "box": [
+            1442,
+            2236,
+            1915,
+            2294
+          ],
+          "sharpness": 445.52,
+          "quality": "POOR"
+        },
+        {
+          "text": "Badshah Kitchen King Masala.",
+          "confidence": 1.0,
+          "box": [
+            678,
+            2256,
+            1206,
+            2306
+          ],
+          "sharpness": 312.32,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Hh2 1 111 5",
+          "confidence": 0.579,
+          "box": [
+            1444,
+            2281,
+            1913,
+            2330
+          ],
+          "sharpness": 432.55,
+          "quality": "POOR"
+        },
+        {
+          "text": "o ins",
+          "confidence": 0.709,
+          "box": [
+            678,
+            2304,
+            963,
+            2349
+          ],
+          "sharpness": 338.95,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "",
+          "confidence": 0.0,
+          "box": [
+            1444,
+            2319,
+            1701,
+            2376
+          ],
+          "sharpness": 434.55,
+          "quality": "POOR"
+        },
+        {
+          "text": "deas",
+          "confidence": 0.705,
+          "box": [
+            677,
+            2389,
+            1204,
+            2439
+          ],
+          "sharpness": 315.25,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "我2,.",
+          "confidence": 0.437,
+          "box": [
+            1443,
+            2391,
+            1911,
+            2446
+          ],
+          "sharpness": 354.29,
+          "quality": "POOR"
+        },
+        {
+          "text": "  or",
+          "confidence": 0.637,
+          "box": [
+            677,
+            2434,
+            1205,
+            2479
+          ],
+          "sharpness": 354.95,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "2001",
+          "confidence": 0.895,
+          "box": [
+            1445,
+            2437,
+            1910,
+            2482
+          ],
+          "sharpness": 434.47,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "s5s",
+          "confidence": 0.533,
+          "box": [
+            1290,
+            2459,
+            1353,
+            2504
+          ],
+          "sharpness": 191.61,
+          "quality": "POOR"
+        },
+        {
+          "text": "min. Add salt and 2 cups of",
+          "confidence": 0.991,
+          "box": [
+            675,
+            2476,
+            1205,
+            2522
+          ],
+          "sharpness": 314.66,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "2",
+          "confidence": 0.913,
+          "box": [
+            1441,
+            2473,
+            1912,
+            2530
+          ],
+          "sharpness": 373.67,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "water and bring to boil. Cook",
+          "confidence": 1.0,
+          "box": [
+            675,
+            2522,
+            1203,
+            2563
+          ],
+          "sharpness": 352.7,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "siane 3ala 1 5-7 fie ao",
+          "confidence": 0.658,
+          "box": [
+            1442,
+            2520,
+            1910,
+            2565
+          ],
+          "sharpness": 442.05,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "for 5-7 mins. Garnish with",
+          "confidence": 1.0,
+          "box": [
+            675,
+            2562,
+            1202,
+            2603
+          ],
+          "sharpness": 318.42,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "",
+          "confidence": 0.0,
+          "box": [
+            1441,
+            2560,
+            1911,
+            2610
+          ],
+          "sharpness": 370.46,
+          "quality": "POOR"
+        },
+        {
+          "text": "coriander leaves and serve hot",
+          "confidence": 0.964,
+          "box": [
+            675,
+            2606,
+            1203,
+            2647
+          ],
+          "sharpness": 360.64,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "",
+          "confidence": 0.0,
+          "box": [
+            1442,
+            2605,
+            1909,
+            2649
+          ],
+          "sharpness": 371.8,
+          "quality": "POOR"
+        },
+        {
+          "text": "with paratha or naan.",
+          "confidence": 1.0,
+          "box": [
+            675,
+            2649,
+            1046,
+            2691
+          ],
+          "sharpness": 303.87,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "R",
+          "confidence": 0.525,
+          "box": [
+            1440,
+            2644,
+            1543,
+            2694
+          ],
+          "sharpness": 423.82,
+          "quality": "POOR"
+        },
+        {
+          "text": "SPICE CONTENT MORE THAN 85%",
+          "confidence": 0.987,
+          "box": [
+            674,
+            2706,
+            1359,
+            2759
+          ],
+          "sharpness": 432.93,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "INGREDIENTS: Coriander, Dried Garlic, Cumin, Black Pepper,",
+          "confidence": 0.994,
+          "box": [
+            673,
+            2757,
+            1749,
+            2812
+          ],
+          "sharpness": 340.08,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Turmeric, Fennel, Cassia, Tejpat, lodised Salt, Dried Mango, Mustard,",
+          "confidence": 0.987,
+          "box": [
+            671,
+            2802,
+            1851,
+            2864
+          ],
+          "sharpness": 325.5,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Clove, Methi Leaf, Dried Ginger, Fenugreek Seeds, Kachari, Large",
+          "confidence": 1.0,
+          "box": [
+            672,
+            2852,
+            1788,
+            2910
+          ],
+          "sharpness": 325.58,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Cardamom, Star Anise and Compounded Asafoetida.",
+          "confidence": 0.998,
+          "box": [
+            671,
+            2901,
+            1583,
+            2960
+          ],
+          "sharpness": 317.75,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Allergen Information: Contains Wheat",
+          "confidence": 0.984,
+          "box": [
+            668,
+            2955,
+            1420,
+            3019
+          ],
+          "sharpness": 233.63,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "Legal Name: Badshah Masala Private Limited",
+          "confidence": 0.99,
+          "box": [
+            667,
+            3007,
+            1541,
+            3077
+          ],
+          "sharpness": 235.66,
+          "quality": "QUESTIONABLE"
+        },
+        {
+          "text": "PWM Registration No.: BO-06-000-08-AAFCJ0494B-22",
+          "confidence": 0.994,
+          "box": [
+            666,
+            3060,
+            1721,
+            3134
+          ],
+          "sharpness": 191.77,
+          "quality": "QUESTIONABLE"
+        }
+      ]
+    }
+  ]
+}

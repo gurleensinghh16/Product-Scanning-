@@ -1,87 +1,216 @@
 const { GoogleGenAI } = require("@google/genai");
-const fs = require("fs");
 const path = require("path");
-require("dotenv").config({ path: path.join(__dirname, "../../.env") });
+
+require("dotenv").config({
+  path: path.join(__dirname, "../../.env")
+});
+
+const rules = require("./rules.json");
 
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY
 });
 
-const SYSTEM_INSTRUCTION = `
-You are an AI assistant for a Legal Metrology packaged commodity
-inspection system.
 
-Your job is to convert the results produced by a deterministic
-Rule Engine into a clear and professional inspection summary.         
+const SYSTEM_INSTRUCTION = `
+You are an AI analysis assistant for a Legal Metrology
+packaged commodity inspection system.
+
+Your role is ONLY to convert the deterministic Rule Engine
+result into a clear, professional inspection report.
+
+The Rule Engine is the authoritative source for compliance
+status and configured rules.
 
 IMPORTANT RULES:
 
-1. Do NOT make your own legal compliance decisions.
-2. Do NOT create, modify, or assume legal rules.
-3. Do NOT invent missing information.
-4. Do NOT override the Rule Engine result.
-5. Only explain the findings provided by the Rule Engine.
-6. Clearly distinguish between PASS, POTENTIAL_NON_COMPLIANCE,
-   and NEEDS_REVIEW.
-7. For failed or questionable checks, explain the evidence provided.
-8. Keep the explanation professional and suitable for an
-   official inspection report.
-9. The final legal decision remains with the authorized
-   Legal Metrology inspector.
+1. NEVER make your own legal compliance decisions.
 
-Return only the inspection summary.
+2. NEVER create, modify, infer, or assume legal rules.
+
+3. NEVER change a Rule Engine status.
+
+4. NEVER convert POTENTIAL_NON_COMPLIANCE into confirmed
+   non-compliance.
+
+5. NEVER convert NEEDS_REVIEW into PASS.
+
+6. NEVER invent missing information.
+
+7. ONLY use the information provided in the input.
+
+8. Explain the evidence returned by the Rule Engine.
+
+9. Clearly distinguish:
+   - PASS
+   - POTENTIAL_NON_COMPLIANCE
+   - NEEDS_REVIEW
+
+10. If a finding is ambiguous or questionable, clearly state
+    that it requires verification by the inspecting officer.
+
+11. The final legal decision remains with the authorized
+    Legal Metrology inspector.
+
+12. Do not provide legal advice.
+
+13. Do not add legal requirements that are not present in
+    the supplied rules.
+
+Return only the requested structured JSON report.
 `;
+
 
 async function generateSummary(ruleEngineResult) {
-  const prompt = `
-Generate a concise inspection summary from the following
-Rule Engine result.
 
-Rule Engine Result:
+  const category = ruleEngineResult.category;
+  const subcategory = ruleEngineResult.subcategory;
+
+  let applicableRules = null;
+
+  if (
+    rules.categories &&
+    rules.categories[category] &&
+    rules.categories[category].subcategories
+  ) {
+    applicableRules =
+      rules.categories[category]
+        .subcategories[subcategory] || null;
+  }
+
+
+  const prompt = `
+Generate a professional inspection analysis from the
+following deterministic Rule Engine result.
+
+RULE ENGINE RESULT:
+
 ${JSON.stringify(ruleEngineResult, null, 2)}
+
+
+APPLICABLE RULES FROM rules.json:
+
+${JSON.stringify(applicableRules, null, 2)}
+
+
+INSTRUCTIONS:
+
+- The Rule Engine result is authoritative.
+- Do not change any Rule Engine status.
+- Do not invent rules.
+- Do not invent evidence.
+- Do not make a final legal determination.
+- Explain the findings clearly.
+- Explain potential issues.
+- Identify items requiring officer verification.
+- If evidence is ambiguous, explicitly say so.
+
+Generate the report using the required JSON structure.
 `;
 
+
   const response = await ai.models.generateContent({
-    model: "gemini-3.8-flash",
+
+    model: "gemini-3.6-flash",
+
     contents: prompt,
+
     config: {
+
       systemInstruction: SYSTEM_INSTRUCTION,
+
       thinkingConfig: {
         thinkingLevel: "low"
+      },
+
+      responseMimeType: "application/json",
+
+      responseSchema: {
+        type: "object",
+
+        properties: {
+
+          inspection_summary: {
+            type: "string"
+          },
+
+          overall_assessment: {
+            type: "string",
+            enum: [
+              "PASS",
+              "POTENTIAL_NON_COMPLIANCE",
+              "NEEDS_REVIEW"
+            ]
+          },
+
+          key_findings: {
+            type: "array",
+
+            items: {
+              type: "object",
+
+              properties: {
+
+                type: {
+                  type: "string",
+                  enum: [
+                    "PASS",
+                    "POTENTIAL_NON_COMPLIANCE",
+                    "NEEDS_REVIEW"
+                  ]
+                },
+
+                title: {
+                  type: "string"
+                },
+
+                description: {
+                  type: "string"
+                }
+
+              },
+
+              required: [
+                "type",
+                "title",
+                "description"
+              ]
+            }
+          },
+
+          officer_attention: {
+            type: "array",
+
+            items: {
+              type: "string"
+            }
+          },
+
+          limitations: {
+            type: "array",
+
+            items: {
+              type: "string"
+            }
+          }
+
+        },
+
+        required: [
+          "inspection_summary",
+          "overall_assessment",
+          "key_findings",
+          "officer_attention",
+          "limitations"
+        ]
       }
     }
   });
 
-  return response.text;
+
+  return JSON.parse(response.text);
 }
 
-
-// Temporary test
-async function testAI() {
-  try {
-    const filePath = path.join(
-      __dirname,
-      "../test-data/test_rule_result.json"
-    );
-
-    const ruleEngineResult = JSON.parse(
-      fs.readFileSync(filePath, "utf-8")
-    );
-
-    console.log("Sending Rule Engine result to Gemini...\n");
-
-    const summary = await generateSummary(ruleEngineResult);
-
-    console.log("========== AI SUMMARY ==========\n");
-    console.log(summary);
-    console.log("\n================================");
-  } catch (error) {
-    console.error("AI Summary Error:");
-    console.error(error);
-  }
-}
-
-testAI();
 
 module.exports = {
   generateSummary

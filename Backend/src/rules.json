@@ -1,29 +1,36 @@
 {
   "common_rules": [
     {
-  "id": "product_name",
-  "label": "Product / Commodity Name",
-  "keywords": [
-    "biscuit",
-    "biscuits",
-    "tea",
-    "coffee",
-    "cereal",
-    "pulses",
-    "salt",
-    "shampoo",
-    "cream",
-    "lotion",
-    "perfume",
-    "soap",
-    "detergent",
-    "soft drink",
-    "beverage",
-    "drinking water",
-    "mineral water"
-  ],
-  "required": true
-},
+      "id": "product_name",
+      "label": "Product / Commodity Name",
+      "keywords": [
+        "biscuit",
+        "biscuits",
+        "tea",
+        "coffee",
+        "cereal",
+        "pulses",
+        "salt",
+        "shampoo",
+        "cream",
+        "lotion",
+        "perfume",
+        "soap",
+        "detergent",
+        "soft drink",
+        "beverage",
+        "drinking water",
+        "mineral water",
+        "coke",
+        "diet coke",
+        "cola",
+        "masala",
+        "spices",
+        "mixed masala powder",
+        "kitchen king"
+      ],
+      "required": true
+    },
     {
       "id": "net_quantity",
       "label": "Net Quantity",
@@ -63,24 +70,24 @@
       "id": "manufacturer",
       "label": "Manufacturer / Packer / Importer",
       "keywords": [
-  "manufactured by",
-  "manufactured for",
-  "manufactured",
-  "marketed by",
-  "marketed",
-  "mfg by",
-  "mfg/mkt by",
-  "mfg/mkt",
-  "mfg",
-  "mkt by",
-  "packed by",
-  "packed for",
-  "packed",
-  "imported by",
-  "importer",
-  "manufacturer",
-  "packer"
-],
+        "manufactured by",
+        "manufactured for",
+        "manufactured",
+        "marketed by",
+        "marketed",
+        "mfg by",
+        "mfg/mkt by",
+        "mfg/mkt",
+        "mfg",
+        "mkt by",
+        "packed by",
+        "packed for",
+        "packed",
+        "imported by",
+        "importer",
+        "manufacturer",
+        "packer"
+      ],
       "required": true
     },
     {
@@ -110,23 +117,23 @@
       "required": true
     },
     {
-  "id": "date",
-  "label": "Manufacturing / Packing Date",
-  "keywords": [
-    "mfg date",
-    "mfg.",
-    "mfd",
-    "mfd.",
-    "pkd",
-    "pkd.",
-    "packed on",
-    "packing date",
-    "manufacturing date",
-    "date of manufacture",
-    "date of packing"
-  ],
-  "required": false
-},
+      "id": "date",
+      "label": "Manufacturing / Packing Date",
+      "keywords": [
+        "mfg date",
+        "mfg.",
+        "mfd",
+        "mfd.",
+        "pkd",
+        "pkd.",
+        "packed on",
+        "packing date",
+        "manufacturing date",
+        "date of manufacture",
+        "date of packing"
+      ],
+      "required": false
+    },
     {
       "id": "best_before",
       "label": "Best Before / Use By",
@@ -232,7 +239,9 @@
           "below": "50g",
           "multiple": "10g",
           "below_restriction": true
-        }
+        },
+
+        "spices": {}
       }
     },
 
