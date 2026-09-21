@@ -73,3 +73,5 @@ export default defineConfig([
 ])
 
 ```
+Product scanning by ocr scanning and picture of labels !
+using paddle ocr 
